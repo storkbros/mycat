@@ -74,8 +74,8 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
-$vettitem = $row[id];
-if ( $row[siker]== 1 ) { ?>
+$vettitem = $row['id'];
+if ( $row['siker']== 1 ) { ?>
 <div class="alert alert-success alert-dismissible">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
     <strong>Sikeres vásárlás!</strong> Gratulálok a/az <?php echo $row[itemname] ?>-hoz/hez.</div>
