@@ -9,10 +9,14 @@
 <body>
 <?php
     include('../dpc.php');
-    shell_exec("sudo cp -a /var/www/html/teszt/. /var/www/html/");
 
-    if(isset($_POST['version'])){
+$sql = "SELECT * FROM system ORDER BY id DESC LIMIT 1; ";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+
+if(isset($_POST['version'])){
         shell_exec("sudo cp -a /var/www/html/teszt/. /var/www/html/");
+        $ses_sql = mysqli_query($conn,"INSERT INTO ");
     }
 ?>
 
@@ -20,11 +24,11 @@
     <form action="index.php" method="post">
         <div class="form-group">
             <label for="version">Version</label>
-            <input type="text" class="form-control" id="version" placeholder="Version">
+            <input type="text" class="form-control" id="version" placeholder="last version: <?php echo $row['verzio'] ?>">
         </div>
         <div class="form-group">
             <label for="note">Note</label>
-            <input type="text" class="form-control" id="note" placeholder="Note">
+            <input type="text" class="form-control" id="note" placeholder="last note: <?php echo $row['note'] ?>">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
