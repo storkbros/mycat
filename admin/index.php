@@ -14,7 +14,7 @@ $sql = "SELECT * FROM system ORDER BY id DESC LIMIT 1; ";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 
-if(isset($_POST['version'])){
+if(!empty($_POST)){
     echo "he";
         shell_exec("sudo cp -a /var/www/html/teszt/. /var/www/html/");
         $ses_sql = mysqli_query($conn,"INSERT INTO system (verzio, note, date,extra) VALUES ('".$_POST['note']."','".$_POST['note']."',NOW(),'admin page');");
