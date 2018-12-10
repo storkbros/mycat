@@ -14,6 +14,7 @@
         border:none;
         color: black;
         cursor: pointer;
+        text-decoration: none;
     }
 
     th {
