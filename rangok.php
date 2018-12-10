@@ -28,7 +28,7 @@
 include('session.php'); 
 $loginname=$login_session;
 ?>
-
+<div class="container">
 	<table class="table table-bordered" style="background-color:white;max-width:1000px;" id="retek" >
     <thead>
       <tr>
@@ -141,7 +141,7 @@ if ($result->num_rows > 0) {
   </table>
 
 
-    
+</div>
 
  <div class="container-fluid">
   <div class="row" style="position:fixed;bottom:0;">
