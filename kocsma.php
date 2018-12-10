@@ -165,7 +165,7 @@
 	
 	
 	
-	 <div class="col-3" id="valami" style="min-width:280px;width:100%;">
+	 <div class="col-3 mx-auto" id="valami" style="min-width:280px;width:100%;">
 	  <ul class="price<?php if($aktiv == 1 and $block <> $aktivq ){ echo 1; } ?>" style="min-width:260px;"> 
 		<li class="header"><?php echo $row["name"]; ?></li>
 		
@@ -250,7 +250,7 @@
 	
 	
 	
-	 <div class="col-3" id="valami" style="min-width:280px;width:100%;">
+	 <div class="col-3 mx-auto" id="valami" style="min-width:280px;width:100%;">
 	  <ul class="price<?php if($aktiv == 1 and $block <> $aktivq ){ echo 1; } ?>" style="min-width:260px;"> 
 		<li class="header"><?php echo $row["name"]; ?></li>
 		
@@ -335,7 +335,7 @@
 	
 	
 	
-	 <div class="col-3" id="valami" style="min-width:280px;width:100%;">
+	 <div class="col-3 mx-auto" id="valami" style="min-width:280px;width:100%;">
 	  <ul class="price<?php if($aktiv == 1 and $block <> $aktivq ){ echo 1; } ?>" style="min-width:260px;"> 
 		<li class="header"><?php echo $row["name"]; ?></li>
 		
@@ -418,7 +418,7 @@
 	
 	
 	
-	 <div class="col-3" id="valami" style="min-width:280px;width:100%;">
+	 <div class="col-3 mx-auto" id="valami" style="min-width:280px;width:100%;">
 	  <ul class="price<?php if($aktiv == 1 and $block <> $aktivq ){ echo 1; } ?>" style="min-width:260px;"> 
 		<li class="header"><?php echo $row["name"]; ?></li>
 		
