@@ -15,7 +15,7 @@
 
 <?php
 include 'raktar.php';
-include('dpc.php'); 
+include_once('dpc.php');
 $sql = "SELECT * FROM system ORDER BY id DESC LIMIT 1; ";
 $result = $conn->query($sql);
 $i=0;

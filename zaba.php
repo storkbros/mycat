@@ -1,5 +1,5 @@
-<?php 
-include('session.php');
+<?php
+include_once('session.php');
 define('TIMEZONE', 'Europe/Paris');
 date_default_timezone_set(TIMEZONE);
 echo $_POST["itemid"];
@@ -9,7 +9,7 @@ $foodname = $_POST["food"];
 echo $_POST["food"];
 $loginname=$login_session;
 $da = date("Y-m-d H:i:s");
-include('dpc.php');
+include_once('dpc.php');
 echo "halo";
 
 if ( $_POST["tipus"] == 1) {

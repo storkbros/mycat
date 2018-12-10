@@ -1,8 +1,6 @@
-<?php 
-include('session.php');
-include('dp.php');
-define('TIMEZONE', 'Europe/Paris');
-date_default_timezone_set(TIMEZONE);
+<?php
+include_once('session.php');
+include_once('dp.php');
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

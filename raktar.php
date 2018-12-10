@@ -19,7 +19,7 @@
 	<div class="row">
 	
 <?php
-include('dpc.php');
+include_once('dpc.php');
 mysqli_set_charset($conn,"utf8");
  
 $sql = "SELECT raktar.itemid, raktar.itemcount, kaja.id, kaja.tipus, kaja.link, kaja.name 

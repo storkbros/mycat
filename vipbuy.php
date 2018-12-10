@@ -1,6 +1,6 @@
 <?php
-include('session.php');
-include('dpc.php'); 
+include_once('session.php');
+include_once('dpc.php');
 $userteszt = $_SESSION['login_user'];
 $sql = "SELECT * FROM users WHERE name='$userteszt'; ";
 $result = $conn->query($sql);

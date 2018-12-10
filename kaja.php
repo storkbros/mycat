@@ -13,8 +13,8 @@
   </style>
 
 <?php 
-include 'session.php';
-include 'db.php';  
+include_once 'session.php';
+include_once 'db.php';
 $userteszt = $_SESSION['login_user'];
 ?>
 
