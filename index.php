@@ -45,7 +45,7 @@ if ( $_GET["page"] == "firstlogin") {
 include 'firstlogin.php';
 } else {
 if ( $_GET["page"] == "admin2" ) { 
-include '.php';
+include 'msn.php';
 } else {	
 include 'topbar2.php';
 }
