@@ -150,6 +150,7 @@ if ($row["catenergy"] < 100) {
         var timeleft2 = <?php echo $tkovienergy; ?>;
         var valami = 0;
         var szamlalo =setInterval(function () {
+            --timeleft2;
             var d = Math.floor(timeleft2 / 600);
             var c = Math.floor(timeleft2);
             var c = Math.floor(timeleft2 / 60);
