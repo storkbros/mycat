@@ -1,6 +1,6 @@
-<?php 
-include('session.php');
-include('dp.php');
+<?php
+include_once('session.php');
+include_once('dp.php');
 $userteszt = $_SESSION['login_user'];
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
@@ -13,6 +13,6 @@ $myenergy =$row["catenergy"];
 $myfoodcount =$row["foodcount"]; 
 $mydrinkcount =$row["drinkcount"]; 
 
-if ( $row["foodcount"] == 0 ) { header("location:index.php");   }
-if ( $row["drinkcount"] == 0 ) {  header("location:index.php"); }
+if ( $row["foodcount"] == 0 ) { header("location:index.php");die();}
+if ( $row["drinkcount"] == 0 ) {  header("location:index.php");die();}
 ?>

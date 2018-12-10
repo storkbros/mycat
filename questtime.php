@@ -1,5 +1,5 @@
-<?php 
-include('session.php');
+<?php
+include_once('session.php');
 define('TIMEZONE', 'Europe/Paris');
 date_default_timezone_set(TIMEZONE);
 $userteszt = $_SESSION['login_user'];
