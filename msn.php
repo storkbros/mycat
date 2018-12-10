@@ -41,7 +41,7 @@
     <?php
     include_once('session.php');
     $loginname=$login_session;
-
+    $olvas=0;
     $conn = new mysqli($servername, $username, $password, $dbname);
     mysqli_set_charset($conn,"utf8");
     if ($conn->connect_error) {
