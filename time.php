@@ -3,7 +3,6 @@ include_once('session.php');
 include_once('db.php');
 $loginname=$login_session; 
 $userteszt = $_SESSION['login_user'];
-date_default_timezone_set(TIMEZONE);
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
