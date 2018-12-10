@@ -83,15 +83,7 @@ if ($result->num_rows > 0) {
       </tr>
     </thead>
     <tbody>
-	<?php 
-$servername = "vps.dornyayse.hu";
-$username = "misiek";
-$password = "19970227";
-$dbname = "misiek";
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+	<?php
 $sql = "SELECT catlvl FROM users WHERE name='$loginname';";
 $result = $conn->query($sql);
 $i=0;
@@ -153,7 +145,7 @@ if ($result->num_rows > 0) {
 
  <div class="container-fluid">
   <div class="row" style="position:fixed;bottom:0;">
-    <div class="col-12" style="background-color:lavender;"><?php echo "ID: ". $row["id"]. " - Verzió: ". $row["verzio"]. " Date:" . $row["date"] ."" ?></div>
+    <div class="col-12" style="background-color:lavender;"><?php echo "ID: ". $row["id"]. " - Verziï¿½: ". $row["verzio"]. " Date:" . $row["date"] ."" ?></div>
   </div>
 </div>
  
