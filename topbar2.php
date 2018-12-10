@@ -14,7 +14,8 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     $uzi = $row["uzi"];
-} else { $uzi = 0 ;
+} else {
+    $uzi = 0;
 }
 
 
@@ -57,24 +58,28 @@ $vipcoin = $row['vipcoin'];
     <div class="container">
         <a class="navbar-brand" href="index.php"><img src="catlogo.png" alt="logo" style="width:30px;">MyCat</a>
         <ul class="navbar-nav mx-auto" style="flex-direction: row;">
-            <li class="nav-item active" >
-            <span class="navbar-text" style="border-radius:15px 0 0 15px;background-color:#17a2b8;color:white;height:50px;"><i id="valami"
-                                                                                 class='fas fa-gem'
-                                                                                 style='color:white;'></i> <?php echo $bcoin ?>
+            <li class="nav-item active">
+            <span class="navbar-text"
+                  style="border-radius:15px 0 0 15px;background-color:#17a2b8;color:white;height:40px;"><i id="valami"
+                                                                                                           class='fas fa-gem'
+                                                                                                           style='color:white;'></i> <?php echo $bcoin ?>
             </span>
             </li>
             <li class="nav-item active">
-            <span class="navbar-text" style="background-color:#ffc107;color:white;height:50px;"><i id="valami" class='fas fa-gem'
-                                                                                 style='color:white;'></i> <?php echo $vipcoin ?>
+            <span class="navbar-text" style="background-color:#ffc107;color:white;height:40px;"><i id="valami"
+                                                                                                   class='fas fa-gem'
+                                                                                                   style='color:white;'></i> <?php echo $vipcoin ?>
             </span>
             </li>
             <li class="nav-item active">
-            <span class="navbar-text" style="border-radius: 0 15px 15px 0;background-color:#E344FF;color:white;height:50px"><i id="valami" class='fas fa-battery-half'
-                                                                                style='color:white;vertical-align:-2px;'></i><b
+            <span class="navbar-text"
+                  style="border-radius: 0 15px 15px 0;background-color:#E344FF;color:white;height:40px"><i id="valami"
+                                                                                                           class='fas fa-battery-half'
+                                                                                                           style='color:white;vertical-align:-2px;'></i><b
                         id="energycount"> <?php echo $row["catenergy"]; ?></b> <b id="energy">FULL</b></span>
             </li>
         </ul>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -86,7 +91,7 @@ $vipcoin = $row['vipcoin'];
                                                                                         style="width:25px;color:white;">&#xe7fd;</i>
                         <span class="badge badge-light">0</span></a></li>
                 <li class="nav-item" style="margin:5px;margin-top:10px;"><a href="#"><i class="material-icons"
-                                                                                        style="width:25px;color:<?php if ( $uzi > 0) { ?> red <?php } else { ?> white <?php } ?>;">&#xe0be;</i>
+                                                                                        style="width:25px;color:<?php if ($uzi > 0) { ?> red <?php } else { ?> white <?php } ?>;">&#xe0be;</i>
                         <span class="badge badge-light"><?php echo $uzi; ?></span></a></li>
                 <li class="nav-item" style="margin:5px;margin-top:10px;"><a href="index.php?page=index">
                         <button type="button" class="btn btn-light" style="min-width:100%;margin-top:-5px;color:#333;">
@@ -159,7 +164,7 @@ if ($row["catenergy"] < 100) {
 
         var timeleft2 = <?php echo $tkovienergy; ?>;
         var valami = 0;
-        var szamlalo =setInterval(function () {
+        var szamlalo = setInterval(function () {
             --timeleft2;
             var d = Math.floor(timeleft2 / 600);
             var c = Math.floor(timeleft2);
