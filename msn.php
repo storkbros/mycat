@@ -56,9 +56,9 @@
                 <td class="check">
                    <?php if ( $row["uj"]== 1) { ?> <i class="fa fa-envelope" style="font-size:24px;color:#091534"></i> <?php } else { ?>
                     <a href="index.php?page=admin2&olvas=<?php echo $row["id"]; ?>" >     <i class="fa fa-envelope-o" style="font-size:24px;color:#091534"></i> <?php } ?> </a>
-                    <a href="index.php?page=admin2&olvas=<?php echo $row["id"]; ?>" > <td class="check"><?php echo $row["sendname"]; ?></td></a>
-              <a href="index.php?page=admin2&olvas=<?php echo $row["id"]; ?>" > <td class="check"><?php echo $row["title"]; ?></td></a>
-                  <a href="index.php?page=admin2&olvas=<?php echo $row["id"]; ?>" > <td class="check"><?php echo $row["date"]; ?></td> </a>
+                <td class="check"> <a href="index.php?page=admin2&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["sendname"]; ?></a></td>
+                <td class="check"> <a href="index.php?page=admin2&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["title"]; ?></a></td>
+                <td class="check"> <a href="index.php?page=admin2&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["date"]; ?></a></td>
             </tr>
 
 
