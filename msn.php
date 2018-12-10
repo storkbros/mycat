@@ -29,6 +29,7 @@
 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container" style="margin-top:10px;">
 <table style="width:auto;text-align:center;min-width:50%;font-color:#091534">
     <tr class="teszt">
         <th style="width:30px;"><i class="fa fa-envelope-square" style="font-size:24px;"></i></th>
@@ -69,3 +70,4 @@
     }
     ?>
 </table>
+</div>
