@@ -4,7 +4,7 @@
 	  background-image: url("image/store.png");
 	background-color: #cccccc;
 	background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
 	 background-attachment: fixed;
 	 padding-top:0px;
 	 margin-top:0px;
@@ -22,7 +22,7 @@ $userteszt = $_SESSION['login_user'];
 
 <div class="container">
 <nav class="navbar navbar-expand-sm bg-light navbar-dark ">  
-  <ul class="navbar-nav">
+  <ul class="navbar-nav" style="flex-direction: row;">
     <li class="nav-item">
       <a class="nav-link" href="#section1"><button type="button" class="btn btn btn-dark">
 		Ételek <span class="badge badge-light">7</span>

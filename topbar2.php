@@ -57,7 +57,7 @@ $vipcoin = $row['vipcoin'];
     <div class="container">
         <a class="navbar-brand" href="index.php"><img src="catlogo.png" alt="logo" style="width:30px;">MyCat</a>
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item active" style="border-radius: 0 15px 15px 0;">
             <span class="navbar-text" style="background-color:#17a2b8;color:white;height:50px;"><i id="valami"
                                                                                  class='fas fa-gem'
                                                                                  style='color:white;'></i> <?php echo $bcoin ?>
@@ -68,7 +68,7 @@ $vipcoin = $row['vipcoin'];
                                                                                  style='color:white;'></i> <?php echo $vipcoin ?>
             </span>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item active" style="border-radius:  15px 0 0 15px;">
             <span class="navbar-text" style="background-color:#E344FF;color:white;height:50px"><i id="valami" class='fas fa-battery-half'
                                                                                 style='color:white;vertical-align:-2px;'></i><b
                         id="energycount"> <?php echo $row["catenergy"]; ?></b> <b id="energy">FULL</b></span>
