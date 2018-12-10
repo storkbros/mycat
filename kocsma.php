@@ -101,10 +101,10 @@
 	
 	<?php 
 	
-	include('session.php');
+	include_once('session.php');
 	include('questtime.php');
 	include('energytest.php');
-	include('db.php');
+    include_once('db.php');
 	
 	$conn = new mysqli($servername, $username, $password, $dbname);
 	mysqli_set_charset($conn,"utf8");

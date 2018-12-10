@@ -1,6 +1,6 @@
-<?php 
-include('session.php');
-include('dp.php');
+<?php
+include_once('session.php');
+include_once('dp.php');
 $userteszt = $_SESSION['login_user'];
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
@@ -11,8 +11,5 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) { $row = $result->fetch_assoc();  } else { echo "Noresult"; }
 $myenergy =$row["catenergy"];
 $myfoodcount =$row["foodcount"]; 
-$mydrinkcount =$row["drinkcount"]; 
-
-if ( $row["foodcount"] == 0 ) { header("location:index.php");   }
-if ( $row["drinkcount"] == 0 ) {  header("location:index.php"); }
+$mydrinkcount =$row["drinkcount"];
 ?>

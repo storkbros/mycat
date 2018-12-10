@@ -21,8 +21,8 @@ if ($result->num_rows > 0) {
     echo "0 results";
 }
 $conn->close();
-$bcoin=$row[bcoin];
-$vipcoin=$row[vipcoin];
+$bcoin=$row['bcoin'];
+$vipcoin=$row['vipcoin'];
 
 
 
