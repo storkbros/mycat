@@ -11,7 +11,7 @@
     include('../dpc.php');
 
 if(!empty($_GET)){
-    exec("sudo cp -a /var/www/html/teszt/. /var/www/html/");
+    echo exec("cp -a /var/www/html/teszt/. /var/www/html/");
     $ses_sql = mysqli_query($conn,"INSERT INTO system (verzio, note, date,extra) VALUES ('".$_GET['version']."','".$_GET['note']."',NOW(),'admin page');");
 }
 
