@@ -9,11 +9,10 @@
 <body>
 <?php
     include('../dpc.php');
-    exec("sudo cp -a /var/www/html/teszt/. /var/www/html/");
-shell_exec("sudo cp -a /var/www/html/teszt/. /var/www/html/");
+    shell_exec("sudo cp -a /var/www/html/teszt/. /var/www/html/");
 
     if(isset($_POST['version'])){
-        exec("sudo cp -a /var/www/html/teszt/. /var/www/html/");
+        shell_exec("sudo cp -a /var/www/html/teszt/. /var/www/html/");
     }
 ?>
 
