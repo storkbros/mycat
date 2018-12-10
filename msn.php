@@ -55,10 +55,10 @@
           <tr>
                 <td class="check">
                    <?php if ( $row["uj"]== 1) { ?> <i class="fa fa-envelope" style="font-size:24px;color:#091534"></i> <?php } else { ?>
-                    <a href="index.php?page=admin2&olvas=<?php echo $row["id"]; ?>" >     <i class="fa fa-envelope-o" style="font-size:24px;color:#091534"></i> <?php } ?> </a>
-                <td class="check"> <a href="index.php?page=admin2&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["sendname"]; ?></a></td>
-                <td class="check"> <a href="index.php?page=admin2&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["title"]; ?></a></td>
-                <td class="check"> <a href="index.php?page=admin2&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["date"]; ?></a></td>
+                    <a href="index.php?page=msn&olvas=<?php echo $row["id"]; ?>" >     <i class="fa fa-envelope-o" style="font-size:24px;color:#091534"></i> <?php } ?> </a>
+                <td class="check"> <a href="index.php?page=msn&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["sendname"]; ?></a></td>
+                <td class="check"> <a href="index.php?page=msn&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["title"]; ?></a></td>
+                <td class="check"> <a href="index.php?page=msn&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["date"]; ?></a></td>
             </tr>
 
 
@@ -122,7 +122,20 @@ $href = $row["href"];
                 <div class="modal-footer">
                     <?php if ($row["itemid"] <> 0  or $bcoin > 0 or $vipcoin > 0) { ?>
                         <button type="button" class="btn btn-success" data-dismiss="modal">Kérem</button>
-                    <?php }?>
+                    <?php }
+                    $id = $row["id"];
+                    $sql =" UPDATE msn SET uj = '0' WHERE kapname ='$userteszt' AND id = '$id';";
+                    if ($conn->query($sql) === TRUE) {
+                    } else {
+
+                        echo "Error updating record: " . $conn->error;
+
+                    }
+
+
+
+
+                    ?>
 
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Bezárás</button>
                 </div>
