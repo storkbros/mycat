@@ -43,7 +43,7 @@ $userteszt = $_SESSION['login_user'];
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			$row = $result->fetch_assoc();
-			echo $row["itemcount"]; } else {echo "0";} ?>/30
+			echo $row["itemcount"]; } else {echo "0";} ?>/100
 		</th>
 		<th align="left" style="width:10%;"><img src="image/Food/craft7.png" alt="mikulassapi" class="img-fluid" style="max-height:50px;width:auto;opacity: 1.0;"></th> 
 	<th style="width:5%;font-size:4vw;color:white;"><img src="image/kovacs.png" alt="mikulassapi" class="img-fluid" style="max-height:100px;width:auto;opacity: 1.0;"></th>
