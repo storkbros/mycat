@@ -13,9 +13,9 @@ $sql = "SELECT COUNT(*) AS uzi FROM msn WHERE kapname='$userteszt'AND uj = '1';"
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
-} else { $level = 0 ;
+} else { $uzi = 0 ;
 }
-$level = $row["uzi"];
+$uzi = $row["uzi"];
 
 $sql = "SELECT * FROM users WHERE name='$userteszt'; ";
 $result = $conn->query($sql);
