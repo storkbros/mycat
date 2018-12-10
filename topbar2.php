@@ -43,7 +43,7 @@ $vipcoin = $row['vipcoin'];
 </style>
 <body>
 
-<nav class="navbar sticky-top navbar-expand-lg bg-dark navbar-dark" style="height:100%">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="height:100%">
     <div class="container">
         <a class="navbar-brand" href="index.php"><img src="catlogo.png" alt="logo" style="width:30px;">MyCat</a>
         <ul class="navbar-nav mr-auto">
@@ -149,7 +149,7 @@ if ($row["catenergy"] < 100) {
 
         var timeleft2 = <?php echo $tkovienergy; ?>;
         var valami = 0;
-        setInterval(function () {
+        var szamlalo =setInterval(function () {
             var d = Math.floor(timeleft2 / 600);
             var c = Math.floor(timeleft2);
             var c = Math.floor(timeleft2 / 60);
