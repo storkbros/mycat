@@ -108,12 +108,12 @@ $href = $row["href"];
                     <?php if ($row["itemid"] <> 0 ) { ?>
                         x <?php echo $itemcount; ?>
                         <img class="card-img-top" src="image/Food/<?php echo $href; ?>" alt="Card image" style="width:100%;max-height:245px;max-width:100px;min-height:100px">
-
+                        Te kaptál tőle <?php echo $itemname; echo " "; echo $itemcount; echo " dbot"; ?>
                         <?php }?>
                     <br><hr>
-                    <?php if ( $bcoin <> 0 ) { ?> <button type="button" class="btn btn-info" style="font-weight: bold;min-width:100%;"><i class='fas fa-gem' style='font-size:20px;color:white;'></i> <?php echo $bcoin ?></button>   <?php } ?>
-                      <?php if ( $vipcoin<> 0 ) { ?> <button type="button" class="btn btn-warning" style="font-weight: bold; color:white;min-width:100%;"><i class='fas fa-gem' style='font-size:20px;color:white;'></i> <?php echo $vipcoin ?></button> <?php } ?>
-                    <?php if ( $energy <> 0 ) { ?> <button type="button" class="btn btn" style="font-weight: bold;color:white; background-color:#E344FF;min-width:100%;"><i class='fas fa-battery-half' style='font-size:20px;color:white;vertical-align:-2px;'></i> <?php echo $energy; ?> </button><?php } ?>
+                    <?php if ( $bcoin <> 0 ) { ?> <button type="button" class="btn btn-info" style="font-weight: bold;min-width:100%;"><i class='fas fa-gem' style='font-size:20px;color:white;'disabled></i> + <?php echo $bcoin ?></button>   <?php } ?>
+                      <?php if ( $vipcoin<> 0 ) { ?> <button type="button" class="btn btn-warning" style="font-weight: bold; color:white;min-width:100%;"><i class='fas fa-gem' style='font-size:20px;color:white;'disabled></i> + <?php echo $vipcoin ?></button> <?php } ?>
+                    <?php if ( $energy <> 0 ) { ?> <button type="button" class="btn btn" style="font-weight: bold;color:white; background-color:#E344FF;min-width:100%;"><i class='fas fa-battery-half' style='font-size:20px;color:white;vertical-align:-2px;'>disabled</i> + <?php echo $energy; ?> </button><?php } ?>
 
 
 
