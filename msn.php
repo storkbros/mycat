@@ -40,7 +40,7 @@
     <?php
     include('session.php');
     $loginname=$login_session;
-    include 'db.php';
+
     $conn = new mysqli($servername, $username, $password, $dbname);
     mysqli_set_charset($conn,"utf8");
     if ($conn->connect_error) {
