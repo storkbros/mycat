@@ -1,10 +1,10 @@
 
 <div class="container"  >
-   <div class="col-12" style="background-color: rgba(226, 227, 229, 0.3);padding-bottom:15px;min-width:660px;max-width:660px;">
+   <div class="col-12" style="background-color: rgba(226, 227, 229, 0.3);padding-bottom:15px;">
    
    <div class="alert alert-secondary" >
     <strong>Raktáram:</strong></div>
-	<div class="row">
+	<div class="row mx-auto">
 	
 <?php
 include_once('dpc.php');
