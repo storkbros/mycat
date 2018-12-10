@@ -14,7 +14,7 @@ $userteszt = $_SESSION['login_user'];
 	  background-image: url("image/craft.png");
 	background-color: #cccccc;
 	background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
 	 background-attachment: fixed;
 	 padding-top:0px;
 	 margin-top:0px;
