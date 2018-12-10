@@ -52,14 +52,41 @@
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             ?>
-            <tr>
+          <a href="index.php?page=admin2?olvas=<?php echo $row["id"]; ?>" > <tr>
                 <td class="check">
                    <?php if ( $row["uj"]== 1) { ?> <i class="fa fa-envelope" style="font-size:24px;color:#091534"></i> <?php } else { ?>
                         <i class="fa fa-envelope-o" style="font-size:24px;color:#091534"></i> <?php } ?>
                 <td class="check"><?php echo $row["sendname"]; ?></td>
                 <td class="check"><?php echo $row["title"]; ?></td>
                 <td class="check"><?php echo $row["date"]; ?></td>
-            </tr>
+            </tr> </a>
+            <?php if ( $_GET["olvas"] == $row["id"] ) { ?>
+                <div class="modal fade" id="overlay" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalCenterTitle">New achievement!</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body"><div class="row">
+                                    <div class="col-4"> <img src="image/acc1.png" alt="elso" class="img-thumbnail"></div>
+
+                                    <div class="col"> Köszöntelek a Mycat cica nevelde oldalán. Már el is nyerted az első belépésért járó jutalmad.</div>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+
+
+
 
             <?php
 
@@ -71,3 +98,5 @@
     ?>
 </table>
 </div>
+
+
