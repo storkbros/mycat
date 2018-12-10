@@ -1,37 +1,72 @@
+<style>
+    tr.teszt {
+        background-color:#396EFE;
+        cursor: pointer;
 
-<?php
+    }
+    td {
+        background-color:#e9e9ed	;
+        border:none;
+        cursor: pointer;
+    }
+    td.check {
+        background-color:#e9e9ed	;
+        border:none;
+        color: black;
+        cursor: pointer;
+    }
 
-include('session.php');
-$loginname=$login_session;
-include 'db.php';
-$conn = new mysqli($servername, $username, $password, $dbname);
-mysqli_set_charset($conn,"utf8");
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-$sql = "SELECT * FROM msn WHERE name='$loginname';";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-} else {  }
+    th {
+        background-color:#b4bcc0;
+        border:none;
+        color:black;
+    }
 
-?>
+    table {
+        border-collapse: collapse;
+
+    }
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<table style="width:auto;text-align:center;min-width:50%;font-color:#091534">
+    <tr class="teszt">
+        <th style="width:30px;"><i class="fa fa-envelope-square" style="font-size:24px;"></i></th>
+        <th>Feladó</th>
+        <th>Téma</th>
+        <th style="width:auto;">Dátum</th>
+    </tr>
+
+    <?php
+    include('session.php');
+    $loginname=$login_session;
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    mysqli_set_charset($conn,"utf8");
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    $sql = "SELECT * FROM msn WHERE kapname ='$loginname';";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            ?>
+            <tr>
+                <td class="check">
+                    <? if ( $row["uj"] == 1 ) { ?> <i class="fa fa-envelope" style="font-size:24px;color:#091534"></i> <?php echo "mi";} else { ?>
+                        <i class="fa fa-envelope-o" style="font-size:24px;color:#091534"></i> <?php } ?>
+                </td>
+                <td class="check"><?php echo $row["sendname"]; ?></td>
+                <td class="check"><?php echo $row["title"]; ?></td>
+                <td class="check"><?php echo $row["date"]; ?></td>
+            </tr>
+
+            <?php
 
 
-<table style="width:100%">
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Jill</td>
-    <td>Smith</td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Evesdasfasf</td>
-    <td>Jackson</td>
-    <td>94</td>
-  </tr>
+        }
+    } else { echo "nincs";
+
+    }
+    ?>
 </table>
