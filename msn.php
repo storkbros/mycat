@@ -38,7 +38,7 @@
     </tr>
 
     <?php
-    include('session.php');
+    include_once('session.php');
     $loginname=$login_session;
 
     $conn = new mysqli($servername, $username, $password, $dbname);
