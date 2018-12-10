@@ -82,27 +82,38 @@ $sql = "SELECT * FROM msn WHERE kapname='$loginname' AND id= '$olvas';";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    $top1 = 0;
 } else { }
+$itemid = $row["itemid"];
+$itemcount = $row["itemcount"];
+$itemname= $row["itemname"];
+$bcoin = $row["bcoin"];
+$vipcoin = $row["vipcoin"];
+$status = $row["status"];
+$href = $row["href"];
     ?>
     <div class="modal fade" id="overlay" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">New achievement!</h5>
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Üzenet : <?php echo $row["sendname"]; ?>  // <?php echo $row["title"]; ?> // <?php echo $row["date"]; ?> </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body"><div class="row">
-                        <div class="col-4"> <img src="image/acc1.png" alt="elso" class="img-thumbnail"></div>
-
-                        <div class="col"> <?php echo $row["sendname"]; ?></div>
+                        <div class="col"> <?php echo $row["szoveg"]; ?> </div>
                     </div>
+                    <?php if ($row["itemid"] <> 0 ) { ?>
+                        <img class="card-img-top" src="image/Food/<?php echo $href; ?>" alt="Card image" style="width:100%;max-height:245px;max-width:245px;min-height:245px">
+
+                        <?php }?>
+                    <br><hr>
+
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Kérem</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Bezárás</button>
                 </div>
             </div>
         </div>
