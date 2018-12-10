@@ -9,14 +9,7 @@ $foodname = $_POST["food"];
 echo $_POST["food"];
 $loginname=$login_session;
 $da = date("Y-m-d H:i:s");
-$servername = "vps.dornyayse.hu";
-$username = "misiek";
-$password = "19970227";
-$dbname = "misiek";
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include('dpc.php');
 echo "halo";
 
 if ( $_POST["tipus"] == 1) {

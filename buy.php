@@ -1,13 +1,6 @@
 <?php
 include('session.php');
-$servername = "vps.dornyayse.hu";
-$username = "misiek";
-$password = "19970227";
-$dbname = "misiek";
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+include('dpc.php'); 
 $userteszt = $_SESSION['login_user'];
 $sql = "SELECT * FROM users WHERE name='$userteszt'; ";
 $result = $conn->query($sql);

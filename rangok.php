@@ -43,14 +43,7 @@ $loginname=$login_session;
     </thead>
     <tbody>
 	<?php 
-$servername = "vps.dornyayse.hu";
-$username = "misiek";
-$password = "19970227";
-$dbname = "misiek";
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include('dpc.php');
 $sql = "SELECT * FROM users ORDER BY catexp desc";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {

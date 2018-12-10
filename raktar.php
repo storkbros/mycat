@@ -19,15 +19,9 @@
 	<div class="row">
 	
 <?php
-$servername = "vps.dornyayse.hu";
-$username = "misiek";
-$password = "19970227";
-$dbname = "misiek";
-$conn = new mysqli($servername, $username, $password, $dbname);
+include('dpc.php');
 mysqli_set_charset($conn,"utf8");
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+ 
 $sql = "SELECT raktar.itemid, raktar.itemcount, kaja.id, kaja.tipus, kaja.link, kaja.name 
 FROM kaja
 INNER JOIN raktar 

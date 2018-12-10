@@ -15,14 +15,7 @@
 
 <?php
 include 'raktar.php';
-$servername = "vps.dornyayse.hu";
-$username = "misiek";
-$password = "19970227";
-$dbname = "misiek";
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+include('dpc.php'); 
 $sql = "SELECT * FROM system ORDER BY id DESC LIMIT 1; ";
 $result = $conn->query($sql);
 $i=0;
