@@ -11,8 +11,5 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) { $row = $result->fetch_assoc();  } else { echo "Noresult"; }
 $myenergy =$row["catenergy"];
 $myfoodcount =$row["foodcount"]; 
-$mydrinkcount =$row["drinkcount"]; 
-
-if ( $row["foodcount"] == 0 ) { header("location:index.php");die();}
-if ( $row["drinkcount"] == 0 ) {  header("location:index.php");die();}
+$mydrinkcount =$row["drinkcount"];
 ?>
