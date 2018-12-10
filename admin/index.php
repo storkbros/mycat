@@ -14,15 +14,15 @@ $sql = "SELECT * FROM system ORDER BY id DESC LIMIT 1; ";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 
-if(!empty($_POST)){
+if(!empty($_GET)){
     echo "he";
         shell_exec("sudo cp -a /var/www/html/teszt/. /var/www/html/");
-        $ses_sql = mysqli_query($conn,"INSERT INTO system (verzio, note, date,extra) VALUES ('".$_POST['note']."','".$_POST['note']."',NOW(),'admin page');");
+        $ses_sql = mysqli_query($conn,"INSERT INTO system (verzio, note, date,extra) VALUES ('".$_GET['note']."','".$_GET['note']."',NOW(),'admin page');");
 }
 ?>
 
 <div class="container">
-    <form action="index.php" method="post">
+    <form action="index.php" method="GET">
         <div class="form-group">
             <label for="version">Version</label>
             <input type="text" class="form-control" id="version" placeholder="last version: <?php echo $row['verzio'] ?>">
