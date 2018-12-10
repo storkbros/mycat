@@ -44,10 +44,11 @@ include_once 'db.php';
 if ( $page == "firstlogin") {
 include 'firstlogin.php';
 } else {
-if ( $page == "admin2" ) {
+if ( $page == "admin2" )
+    include 'topbar2.php';
 include 'msn.php';
 } else {	
-include 'topbar2.php';
+
 }
 if ( $page == "index") {
 include 'profil.php';
