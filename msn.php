@@ -53,8 +53,8 @@
             ?>
             <tr>
                 <td class="check">
-                    <i class="fa fa-envelope" style="font-size:24px;color:#091534"></i>
-                        <i class="fa fa-envelope-o" style="font-size:24px;color:#091534"></i>
+                   <?php if ( $row["uj"]== 1) { ?> <i class="fa fa-envelope" style="font-size:24px;color:#091534"></i> <?php } else { ?>
+                        <i class="fa fa-envelope-o" style="font-size:24px;color:#091534"></i> <?php } ?>
                 <td class="check"><?php echo $row["sendname"]; ?></td>
                 <td class="check"><?php echo $row["title"]; ?></td>
                 <td class="check"><?php echo $row["date"]; ?></td>
