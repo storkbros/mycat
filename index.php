@@ -42,7 +42,7 @@ if ($page == "firstlogin") {
     include 'firstlogin.php';
 } else {
     include 'topbar2.php';
-    if ($page == "admin2") {
+    if ($page == "msn") {
 
         include 'msn.php';
     } else {
