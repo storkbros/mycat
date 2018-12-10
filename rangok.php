@@ -29,7 +29,7 @@ include('session.php');
 $loginname=$login_session;
 ?>
 <div class="container">
-	<table class="table table-bordered" style="background-color:white;max-width:1000px;" id="retek" >
+	<table class="table table-bordered mt-auto" style="background-color:white;max-width:1000px;" id="retek" >
     <thead>
       <tr>
         <th id="fontos3"style="text-align: center;">Rang</th>
@@ -72,7 +72,7 @@ if ($result->num_rows > 0) {
 
 
 
-<table class="table table-bordered" style="background-color: white;max-width:1000px;">
+<table class="table table-bordered mt-auto" style="background-color: white;max-width:1000px;">
     <thead>
       <tr>
         <th>LvL</th>
@@ -142,12 +142,3 @@ if ($result->num_rows > 0) {
 
 
 </div>
-
- <div class="container-fluid">
-  <div class="row" style="position:fixed;bottom:0;">
-    <div class="col-12" style="background-color:lavender;"><?php echo "ID: ". $row["id"]. " - Verzi�: ". $row["verzio"]. " Date:" . $row["date"] ."" ?></div>
-  </div>
-</div>
- 
- 
-
