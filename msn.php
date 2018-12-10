@@ -92,6 +92,7 @@ $vipcoin = $row["vipcoin"];
 $status = $row["status"];
 $energy = $row["energy"];
 $href = $row["href"];
+$kapta = $row["megkapta"];
     ?>
     <div class="modal fade" id="overlay" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -121,9 +122,7 @@ $href = $row["href"];
 
                 </div>
                 <div class="modal-footer">
-                    <?php if ($row["itemid"] <> 0  or $bcoin > 0 or $vipcoin > 0) { ?>
-                        <button type="button" class="btn btn-success" data-dismiss="modal">Kérem</button>
-                    <?php }
+                    <?php
                     $id = $row["id"];
                     $sql =" UPDATE msn SET uj = '0' WHERE kapname ='$userteszt' AND id = '$id';";
                     if ($conn->query($sql) === TRUE) {
@@ -132,9 +131,28 @@ $href = $row["href"];
                         echo "Error updating record: " . $conn->error;
 
                     }
+                    if ($row["uj"]== 1) {
+                        $sql = "SELECT * FROM users WHERE name='$loginname';";
+                        $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                            $row = $result->fetch_assoc();
+                        } else {
+                        }
+                        $bcoina = $row["bcoin"];
+                        $vipcoina = $row["vipcoin"];
+                        $bcoina = $bcoina + $bcoin;
+                        $vipcoina = $vipcoina + $vipcoin;
 
 
+                        $sql = " UPDATE users SET bcoin= '$bcoina', vipcoin='$vipcoina' WHERE name ='$userteszt' ;";
+                        if ($conn->query($sql) === TRUE) {
+                        } else {
 
+                            echo "Error updating record: " . $conn->error;
+
+                        }
+
+                    }
 
                     ?>
 
