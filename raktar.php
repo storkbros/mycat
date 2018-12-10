@@ -19,7 +19,7 @@
 	<div class="row">
 	
 <?php
-include('dpc.php');
+include_once('dpc.php');
 mysqli_set_charset($conn,"utf8");
  
 $sql = "SELECT raktar.itemid, raktar.itemcount, kaja.id, kaja.tipus, kaja.link, kaja.name 
@@ -33,7 +33,7 @@ $itemid = array();
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
 		
-		if ( $row[itemcount] > 0 ) {
+		if ( $row['itemcount'] > 0 ) {
 			
 	 ?>
 	

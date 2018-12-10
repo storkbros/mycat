@@ -21,7 +21,7 @@ body {background-color: lavender;
   width:20%; /* The width is 20%, by default */
 }
 .left4 {
-  background-color:#white;
+  background-color:white;
   padding:1%;
   float:left;
   height:50px;

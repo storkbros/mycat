@@ -1,6 +1,6 @@
-<?php 
-include 'db.php'; 
-include('session.php');
+<?php
+include_once 'db.php';
+include_once('session.php');
 $userteszt = $_SESSION['login_user'];
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {

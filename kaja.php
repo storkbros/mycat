@@ -13,8 +13,8 @@
   </style>
 
 <?php 
-include 'session.php';
-include 'db.php';  
+include_once 'session.php';
+include_once 'db.php';
 $userteszt = $_SESSION['login_user'];
 ?>
 
@@ -58,7 +58,7 @@ $userteszt = $_SESSION['login_user'];
   </ul>
 </nav>
 <div id="section7" class="container-fluid bg-dark" style="padding-top:0px;padding-bottom:0px;color:#f8f9fa;">
-<center><h4 style="font-color:##ffc107">Ételek <?php echo $_POST["sikeres"]; ?></h4></center>
+<center><h4 style="font-color:##ffc107">Ételek <?php if(isset($_POST["sikeres"]))echo $_POST["sikeres"]; ?></h4></center>
   </div>
 <div id="section1" class="container-fluid" style="padding-top:20px;padding-bottom:70px">
 <?php 
@@ -74,8 +74,8 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
-$vettitem = $row[id];
-if ( $row[siker]== 1 ) { ?>
+$vettitem = $row['id'];
+if ( $row['siker']== 1 ) { ?>
 <div class="alert alert-success alert-dismissible">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
     <strong>Sikeres vásárlás!</strong> Gratulálok a/az <?php echo $row[itemname] ?>-hoz/hez.</div>

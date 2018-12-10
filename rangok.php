@@ -24,8 +24,8 @@
   </style>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<?php 
-include('session.php'); 
+<?php
+include_once('session.php');
 $loginname=$login_session;
 ?>
 <div class="container">
@@ -42,8 +42,8 @@ $loginname=$login_session;
       </tr>
     </thead>
     <tbody>
-	<?php 
-include('dpc.php');
+	<?php
+    include_once('dpc.php');
 $sql = "SELECT * FROM users ORDER BY catexp desc";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
