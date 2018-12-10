@@ -103,16 +103,20 @@ $href = $row["href"];
                 <div class="modal-body"><div class="row">
                         <div class="col"> <?php echo $row["szoveg"]; ?> </div>
                     </div>
+                    <br><hr>
                     <?php if ($row["itemid"] <> 0 ) { ?>
                         <img class="card-img-top" src="image/Food/<?php echo $href; ?>" alt="Card image" style="width:100%;max-height:245px;max-width:245px;min-height:245px">
 
                         <?php }?>
-                    <br><hr>
+
 
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-dismiss="modal">Kérem</button>
+                    <?php if ($row["itemid"] <> 0  or $bcoin > 0 or $vipcoin > 0) { ?>
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Kérem</button>
+                    <?php }?>
+
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Bezárás</button>
                 </div>
             </div>
