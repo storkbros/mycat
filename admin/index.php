@@ -12,7 +12,7 @@
 
 if(!empty($_GET)){
     shell_exec("sudo cp -a /var/www/html/teszt/. /var/www/html/");
-    $ses_sql = mysqli_query($conn,"INSERT INTO system (verzio, note, date,extra) VALUES ('".$_GET['note']."','".$_GET['note']."',NOW(),'admin page');");
+    $ses_sql = mysqli_query($conn,"INSERT INTO system (verzio, note, date,extra) VALUES ('".$_GET['version']."','".$_GET['note']."',NOW(),'admin page');");
 }
 
 $sql = "SELECT * FROM system ORDER BY id DESC LIMIT 1; ";
@@ -26,11 +26,11 @@ $row = $result->fetch_assoc();
     <form action="index.php" method="GET">
         <div class="form-group">
             <label for="version">Version</label>
-            <input type="text" class="form-control" name="version" id="version" placeholder="last version: <?php echo $row['verzio'] ?>">
+            <input type="text" class="form-control" name="version" id="version" placeholder="last version: <?php echo $row['verzio']; ?>">
         </div>
         <div class="form-group">
             <label for="note">Note</label>
-            <input type="text" class="form-control" name="note" id="note" placeholder="last note: <?php echo $row['note'] ?>">
+            <input type="text" class="form-control" name="note" id="note" placeholder="last note: <?php echo $row['note']; ?>">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
