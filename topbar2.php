@@ -8,6 +8,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 $userteszt = $_SESSION['login_user'];
+
+$sql = "SELECT COUNT(*) AS uzi FROM msn WHERE kapname='$userteszt'AND uj = '1';";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+} else { $level = 0 ;
+}
+$level = $row["uzi"];
+
 $sql = "SELECT * FROM users WHERE name='$userteszt'; ";
 $result = $conn->query($sql);
 $i = 0;
@@ -76,8 +85,8 @@ $vipcoin = $row['vipcoin'];
                                                                                         style="width:25px;color:white;">&#xe7fd;</i>
                         <span class="badge badge-light">0</span></a></li>
                 <li class="nav-item" style="margin:5px;margin-top:10px;"><a href="#"><i class="material-icons"
-                                                                                        style="width:25px;color:white;">&#xe0be;</i>
-                        <span class="badge badge-light">0</span></a></li>
+                                                                                        style="width:25px;color:<?php if ( $uzi > 0) { ?> red <?php } else { ?> white <?php } ?>;">&#xe0be;</i>
+                        <span class="badge badge-light"><?php echo $uzi; ?></span></a></li>
                 <li class="nav-item" style="margin:5px;margin-top:10px;"><a href="index.php?page=index">
                         <button type="button" class="btn btn-light" style="min-width:100%;margin-top:-5px;color:#333;">
                             MyCat
