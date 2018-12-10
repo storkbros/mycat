@@ -118,7 +118,7 @@ if ( $page <> "reg") {
     <div class="col-sm-4" style=""></div>
     <div class="col-sm-4" style="">
 	<img src="image/prof.png" class="img-fluid" alt="Responsive image" style="max-width:100%;">
-	 <?php if ($_GET["reg"] == "siker" ) { ?> <div class="alert alert-success">
+	 <?php if (isset($_GET["reg"]) && $_GET["reg"] == "siker" ) { ?> <div class="alert alert-success">
   <strong>Gratulálok!</strong> Sikeres regisztráció! </div> <?php }?>
 	<form action = "" method = "post">
     <h1>MyCat</h1>
