@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "admin felulet"
 AuthUserFile /var/www/html/teszt/admin/.htpasswd
-require valid-user
+Require valid-user

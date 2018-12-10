@@ -43,7 +43,8 @@ $vipcoin=$row[vipcoin];
 </style>
 <body>
 
-<nav class="navbar sticky-top navbar-expand-md bg-dark navbar-dark" style="height:100%">
+<nav class="navbar sticky-top navbar-expand-lg bg-dark navbar-dark" style="height:100%">
+    <div class="container">
     <div class="navbar-brand" style="height:36px;">
 	  	  <table id="teszt" name="teszt" style="width:100%;margin-top:-10px;">
 		<tr style="height:40px;">
@@ -51,7 +52,7 @@ $vipcoin=$row[vipcoin];
 			<th><a class="navbar-brand" id="fasz";href="#"style="color:white;">Mycat</a></th> 
 			<th style="background-color:#17a2b8;padding:5px;border-radius: 15px 0px 0px 15px;height:30px; "><a href="#" style="background-color:#17a2b8;color:white;height:50px;"><i id="valami" name="valami" class='fas fa-gem' style='font-size:auto;color:white;'></i> <?php echo $bcoin ?></a></th>
 			<th style="background-color:#ffc107;padding:5px;height:30px; "><a href="#" style="background-color:#ffc107;color:white;height:50px;"><i id="valami"class='fas fa-gem' style='font-size:auto;color:white;'></i> <?php echo $vipcoin ?></a>  </th>
-			<th style="background-color:#E344FF;padding:5px;border-radius: 0px 15px 15px 0px;height:30px;" ><a href="#" style="background-color:#E344FF;color:white;height:50px"><i id="valami" class='fas fa-battery-half' style='font-size:auto;color:white;vertical-align:-2px;'></i><b id="energycount"> <?php echo $row["catenergy"]; ?></b> <b id="energy"></b></a> </th>
+			<th style="background-color:#E344FF;padding:5px;border-radius: 0px 15px 15px 0px;height:30px;" ><a href="#" style="background-color:#E344FF;color:white;height:50px"><i id="valami" class='fas fa-battery-half' style='font-size:auto;color:white;vertical-align:-2px;'></i><b id="energycount"> <?php echo $row["catenergy"]; ?></b> <b id="energy">FULL</b></a> </th>
 			<th>  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -82,11 +83,11 @@ $vipcoin=$row[vipcoin];
 			<a href="index.php?page=rangok">	<button type="button" class="btn btn-light"style="min-width:100%;"disabled>Achievements</button> </a>
 			</div>
         </li>
-     <li class="nav-item"style="margin:5px;margin-top:10px;"><a href="logout.php"><button type="button" class="btn btn-danger"style="min-width:100%;margin-top:-5px;color:#white;">Kijelentkezés <i class='fas fa-sign-out-alt'></i></button></a></li>
+     <li class="nav-item"style="margin:5px;margin-top:10px;"><a href="logout.php"><button type="button" class="btn btn-danger"style="min-width:100%;margin-top:-5px;color:white;"> <i class='fas fa-sign-out-alt'></i></button></a></li>
     </ul>
     
   </div>
-	
+    </div>
 
 </nav>
 <?php 
@@ -113,7 +114,9 @@ if ( $row["catenergy"] < 100 ) {
 		if ( valami < 100 ) {
 		 szar =  <?php echo $row["catenergy"]; ?> + valami;
 		document.getElementById("energycount").innerHTML =szar;
-		}
+		}else{
+            document.getElementById("energycount").innerHTML ="FULL";
+        }
 	}
 	},1050);
 	</script>
