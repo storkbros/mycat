@@ -20,7 +20,7 @@ $userteszt = $_SESSION['login_user'];
 
 
 
-
+<div class="container">
 <nav class="navbar navbar-expand-sm bg-light navbar-dark ">  
   <ul class="navbar-nav">
     <li class="nav-item">
@@ -271,6 +271,7 @@ if ($result->num_rows > 0) {
 <div id="section4" class="container-fluid bg-secondary" style="padding-top:70px;padding-bottom:70px">
 </div>
 <div id="section5" class="container-fluid bg-secondary" style="padding-top:70px;padding-bottom:70px">
+</div>
 </div>
  <script>
 $(document).ready(function(){
