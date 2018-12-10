@@ -13,7 +13,7 @@ $sql = "SELECT * FROM msn WHERE name='$loginname';";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
-} else {  header("location:index.php?page=rangok"); }
+} else {  }
 
 ?>
 
@@ -30,7 +30,7 @@ if ($result->num_rows > 0) {
     <td>50</td>
   </tr>
   <tr>
-    <td>Eve</td>
+    <td>Evesdasfasf</td>
     <td>Jackson</td>
     <td>94</td>
   </tr>
