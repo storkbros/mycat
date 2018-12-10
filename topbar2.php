@@ -1,8 +1,8 @@
 <?php
-include('session.php');
+include_once('session.php');
 include('time.php');
 include('rangcalc.php');
-include('db.php');
+include_once('db.php');
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

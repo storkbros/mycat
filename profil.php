@@ -7,7 +7,7 @@
 <?php 
 define('TIMEZONE', 'Europe/Paris');
 date_default_timezone_set(TIMEZONE);
-include("db.php");
+include_once("db.php");
 $dalyfirst= $row["napielso"];
 $dalybe = $row["napielsobe"];
 $jutalom = $row["catexp"];
