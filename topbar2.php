@@ -45,8 +45,8 @@ $vipcoin=$row['vipcoin'];
 
 <nav class="navbar sticky-top navbar-expand-lg bg-dark navbar-dark" style="height:100%">
     <div class="container">
-    <div class="navbar-brand" style="height:36px;">
-	  	  <table id="teszt" name="teszt" style="width:100%;margin-top:-10px;">
+
+        <table id="teszt" name="teszt" style="width:100%;margin-top:-10px;">
 		<tr style="height:40px;">
 			<th><a class="navbar-brand" href="index.php"><img src="catlogo.png" alt="logo" style="width:30px;"></a></th>
 			<th><a class="navbar-brand" id="fasz";href="#"style="color:white;">Mycat</a></th> 
@@ -61,7 +61,6 @@ $vipcoin=$row['vipcoin'];
 		</tr>
 	</table>
 
-    </div>
 	  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="margin-top:5px;">
