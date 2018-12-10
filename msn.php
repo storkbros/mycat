@@ -56,9 +56,9 @@
                 <td class="check">
                    <?php if ( $row["uj"]== 1) { ?> <i class="fa fa-envelope" style="font-size:24px;color:#091534"></i> <?php } else { ?>
                     <a href="index.php?page=admin2&olvas=<?php echo $row["id"]; ?>" >     <i class="fa fa-envelope-o" style="font-size:24px;color:#091534"></i> <?php } ?> </a>
-                <td class="check"><?php echo $row["sendname"]; ?></td>
-                <td class="check"><?php echo $row["title"]; ?></td>
-                <td class="check"><?php echo $row["date"]; ?></td>
+                <td class="check"> <a href="index.php?page=admin2&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["sendname"]; ?></a></td>
+                <td class="check"> <a href="index.php?page=admin2&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["title"]; ?></a></td>
+                <td class="check"> <a href="index.php?page=admin2&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["date"]; ?></a></td>
             </tr>
 
 
@@ -103,16 +103,20 @@ $href = $row["href"];
                 <div class="modal-body"><div class="row">
                         <div class="col"> <?php echo $row["szoveg"]; ?> </div>
                     </div>
+                    <br><hr>
                     <?php if ($row["itemid"] <> 0 ) { ?>
                         <img class="card-img-top" src="image/Food/<?php echo $href; ?>" alt="Card image" style="width:100%;max-height:245px;max-width:245px;min-height:245px">
 
                         <?php }?>
-                    <br><hr>
+
 
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-dismiss="modal">Kérem</button>
+                    <?php if ($row["itemid"] <> 0  or $bcoin > 0 or $vipcoin > 0) { ?>
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Kérem</button>
+                    <?php }?>
+
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Bezárás</button>
                 </div>
             </div>
