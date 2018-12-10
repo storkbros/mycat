@@ -90,7 +90,7 @@ $vipcoin = $row['vipcoin'];
                 <li class="nav-item" style="margin:5px;margin-top:10px;"><a href="#"><i class="material-icons"
                                                                                         style="width:25px;color:white;">&#xe7fd;</i>
                         <span class="badge badge-light">0</span></a></li>
-                <li class="nav-item" style="margin:5px;margin-top:10px;"><a href="#"><i class="material-icons"
+                <li class="nav-item" style="margin:5px;margin-top:10px;"><a href="index.php?page=msn"><i class="material-icons"
                                                                                         style="width:25px;color:<?php if ($uzi > 0) { ?> red <?php } else { ?> white <?php } ?>;">&#xe0be;</i>
                         <span class="badge badge-light"><?php echo $uzi; ?></span></a></li>
                 <li class="nav-item" style="margin:5px;margin-top:10px;"><a href="index.php?page=index">
