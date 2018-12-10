@@ -90,7 +90,7 @@ body {background-color: lavender;
 </head>
 <body>
 
-<div class="container" >
+<div class="container-fluid" >
  <div class="row">
 <div class="col-1" style="background-color:lavender;"></div>
 <div class="col" style="background-color:#7F3700;height:3px;max-width:950px;"></div>
