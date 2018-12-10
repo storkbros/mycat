@@ -1,0 +1,17 @@
+Options +FollowSymLinks
+RewriteEngine On
+ 
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+ 
+RewriteRule ^login login.php
+RewriteRule ^login/ login.php
+
+RewriteRule ^home index.php
+RewriteRule ^home/ index.php
+
+RewriteRule ^kocsma index.php?page=kocsma
+RewriteRule ^kocsma/ index.php?page=kocsma
+
+RewriteRule ^bolt index.php?page=shop
+RewriteRule ^bolt/ index.php?page=shop
