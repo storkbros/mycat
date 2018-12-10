@@ -57,7 +57,7 @@ $vipcoin = $row['vipcoin'];
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="height:100%">
     <div class="container">
         <a class="navbar-brand" href="index.php"><img src="catlogo.png" alt="logo" style="width:30px;">
-            <span class="d-none d-md-block">MyCat</span></a>
+            <span class="d-none d-md-inline">MyCat</span></a>
         <ul class="navbar-nav mx-auto" style="flex-direction: row;">
             <li class="nav-item active">
             <span class="navbar-text px-1"
