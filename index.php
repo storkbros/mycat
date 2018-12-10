@@ -39,12 +39,12 @@
 <?php
 $page ="index";
 if(isset($_GET["page"]))$page=$_GET["page"];  
-include 'db.php';
+include_once 'db.php';
 
-if ( $_GET["page"] == "firstlogin") {
+if ( $page == "firstlogin") {
 include 'firstlogin.php';
 } else {
-if ( $_GET["page"] == "admin2" ) { 
+if ( $page == "admin2" ) {
 include 'msn.php';
 } else {	
 include 'topbar2.php';
@@ -53,31 +53,31 @@ if ( $page == "index") {
 include 'profil.php';
 include 'acchiv.php';
 }
-if ( $_GET["page"] == "kocsma") {
+if ( $page == "kocsma") {
 include 'kocsma.php';
 }
-if ( $_GET["page"] == "shop") {
+if ( $page == "shop") {
 include 'kaja.php';
 }
-if ( $_GET["page"] == "admin") {
+if ( $page == "admin") {
 include 'proff.php';
 }
-if ( $_GET["page"] == "szoba") {
+if ( $page == "szoba") {
 include 'szoba.php';
 }
-if ( $_GET["page"] == "rangok") {
+if ( $page == "rangok") {
 include 'rangok.php';
 }
-if ( $_GET["page"] == "proff") {
+if ( $page == "proff") {
 include 'proff.php';
 }
-if ( $_GET["page"] == "forum") {
+if ( $page == "forum") {
 include 'forum.php';
 }
-if ( $_GET["page"] == "raktar") {
+if ( $page == "raktar") {
 include 'raktaram.php';
 }
-if ( $_GET["page"] == "craft") {
+if ( $page == "craft") {
 include 'craft.php';
 }
 }
