@@ -1,9 +1,8 @@
-<?php 
-include('session.php');
-include('db.php');
+<?php
+include_once('session.php');
+include_once('db.php');
 $loginname=$login_session; 
 $userteszt = $_SESSION['login_user'];
-define('TIMEZONE', 'Europe/Paris');
 date_default_timezone_set(TIMEZONE);
 
 $conn = new mysqli($servername, $username, $password, $dbname);
