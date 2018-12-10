@@ -149,9 +149,8 @@ if ($row["catenergy"] < 100) {
 
         var timeleft2 = <?php echo $tkovienergy; ?>;
         var valami = 0;
-        var downloadTimer2 = setInterval(function () {
+        setInterval(function () {
             var d = Math.floor(timeleft2 / 600);
-            <?php echo $tkovienergy; ?> ---timeleft2;
             var c = Math.floor(timeleft2);
             var c = Math.floor(timeleft2 / 60);
             var e = timeleft2 - (c * 60);
@@ -166,8 +165,6 @@ if ($row["catenergy"] < 100) {
                 if (valami < 100) {
                     szar =  <?php echo $row["catenergy"]; ?> +valami;
                     document.getElementById("energycount").innerHTML = szar;
-                } else {
-                    document.getElementById("energycount").innerHTML = "FULL";
                 }
             }
         }, 1050);
