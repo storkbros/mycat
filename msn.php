@@ -107,11 +107,13 @@ if ($result->num_rows > 0) {
             </div>
         </div>
     </div>
+
+    <script>
+        $('#overlay').modal('show');
+
+    </script>
+
 <?php } ?>
 
 
 
-<script>
-    $('#overlay').modal('show');
-
-</script>
