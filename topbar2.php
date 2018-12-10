@@ -43,7 +43,8 @@ $vipcoin=$row[vipcoin];
 </style>
 <body>
 
-<nav class="navbar sticky-top navbar-expand-md bg-dark navbar-dark" style="height:100%">
+<nav class="navbar sticky-top navbar-expand-lg bg-dark navbar-dark" style="height:100%">
+    <div class="container">
     <div class="navbar-brand" style="height:36px;">
 	  	  <table id="teszt" name="teszt" style="width:100%;margin-top:-10px;">
 		<tr style="height:40px;">
@@ -82,11 +83,11 @@ $vipcoin=$row[vipcoin];
 			<a href="index.php?page=rangok">	<button type="button" class="btn btn-light"style="min-width:100%;"disabled>Achievements</button> </a>
 			</div>
         </li>
-     <li class="nav-item"style="margin:5px;margin-top:10px;"><a href="logout.php"><button type="button" class="btn btn-danger"style="min-width:100%;margin-top:-5px;color:#white;">Kijelentkezés <i class='fas fa-sign-out-alt'></i></button></a></li>
+     <li class="nav-item"style="margin:5px;margin-top:10px;"><a href="logout.php"><button type="button" class="btn btn-danger"style="min-width:100%;margin-top:-5px;color:white;"> <i class='fas fa-sign-out-alt'></i></button></a></li>
     </ul>
     
   </div>
-	
+    </div>
 
 </nav>
 <?php 
