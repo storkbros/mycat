@@ -1,11 +1,4 @@
 ﻿
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <style>
 * {
   box-sizing:border-box;
@@ -97,7 +90,7 @@ body {background-color: lavender;
 </head>
 <body>
 
-<div class="container-fluid" > 
+<div class="container-fluid" >
  <div class="row">
 <div class="col-1" style="background-color:lavender;"></div>
 <div class="col" style="background-color:#7F3700;height:3px;max-width:950px;"></div>
