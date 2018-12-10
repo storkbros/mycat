@@ -137,7 +137,7 @@ $href = $row["href"];
 
                     ?>
 
-                    <a href="index.php?page=msn"><button type="button" class="btn btn-danger" data-dismiss="modal">Bezárás</button></a>
+                    <a href="index.php?page=msn"><button type="button" class="btn btn-danger" >Bezárás</button></a>
                 </div>
             </div>
         </div>
