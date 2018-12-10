@@ -58,7 +58,7 @@ $userteszt = $_SESSION['login_user'];
   </ul>
 </nav>
 <div id="section7" class="container-fluid bg-dark" style="padding-top:0px;padding-bottom:0px;color:#f8f9fa;">
-<center><h4 style="font-color:##ffc107">Ételek <?php echo $_POST["sikeres"]; ?></h4></center>
+<center><h4 style="font-color:##ffc107">Ételek <?php if(isset($_POST["sikeres"]))echo $_POST["sikeres"]; ?></h4></center>
   </div>
 <div id="section1" class="container-fluid" style="padding-top:20px;padding-bottom:70px">
 <?php 
