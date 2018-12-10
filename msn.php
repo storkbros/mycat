@@ -144,7 +144,7 @@ $kapta = $row["megkapta"];
                         $vipcoina = $vipcoina + $vipcoin;
 
 
-                        $sql = " UPDATE users SET bocin= '$bcoina', vipcoin='$vipcoina' WHERE name ='$userteszt' ;";
+                        $sql = " UPDATE users SET bcoin= '$bcoina', vipcoin='$vipcoina' WHERE name ='$userteszt' ;";
                         if ($conn->query($sql) === TRUE) {
                         } else {
 
