@@ -76,7 +76,7 @@
 </table>
 </div>
 
-<?php if ( $_GET["olvas"] < 1 ) {
+<?php if ( $_GET["olvas"] > 0 ) {
 $olvas= $_GET["olvas"];
 $sql = "SELECT * FROM msn WHERE kapname='$loginname' AND id= '$olvas';";
 $result = $conn->query($sql);
