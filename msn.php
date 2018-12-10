@@ -111,9 +111,9 @@ $href = $row["href"];
                         Te kaptál tőle <?php echo $itemname; echo " "; echo $itemcount; echo " dbot"; ?>
                         <?php }?>
                     <br><hr>
-                    <?php if ( $bcoin <> 0 ) { ?> <button type="button" class="btn btn-info" style="font-weight: bold;min-width:100%;"><i class='fas fa-gem' style='font-size:20px;color:white;'disabled></i> + <?php echo $bcoin ?></button>   <?php } ?>
-                      <?php if ( $vipcoin<> 0 ) { ?> <button type="button" class="btn btn-warning" style="font-weight: bold; color:white;min-width:100%;"><i class='fas fa-gem' style='font-size:20px;color:white;'disabled></i> + <?php echo $vipcoin ?></button> <?php } ?>
-                    <?php if ( $energy <> 0 ) { ?> <button type="button" class="btn btn" style="font-weight: bold;color:white; background-color:#E344FF;min-width:100%;"><i class='fas fa-battery-half' style='font-size:20px;color:white;vertical-align:-2px;'>disabled</i> + <?php echo $energy; ?> </button><?php } ?>
+                    <?php if ( $bcoin <> 0 ) { ?> <button type="button" class="btn btn-info" style="font-weight: bold;min-width:100%;"><i class='fas fa-gem' style='font-size:20px;color:white;'disable></i> + <?php echo $bcoin ?></button>   <?php } ?>
+                      <?php if ( $vipcoin<> 0 ) { ?> <button type="button" class="btn btn-warning" style="font-weight: bold; color:white;min-width:100%;"><i class='fas fa-gem' style='font-size:20px;color:white;'disable></i> + <?php echo $vipcoin ?></button> <?php } ?>
+                    <?php if ( $energy <> 0 ) { ?> <button type="button" class="btn btn" style="font-weight: bold;color:white; background-color:#E344FF;min-width:100%;"><i class='fas fa-battery-half' style='font-size:20px;color:white;vertical-align:-2px;'disable></i> + <?php echo $energy; ?> </button><?php } ?>
 
 
 
