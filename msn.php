@@ -254,7 +254,7 @@ $kapta = $row["megkapta"];
 
 
 
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Üzenet küldés:  <?php echo $kapname; ?> részére.</h5>
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Üzenet küldés:  <?php echo $kapname; ?> részére</h5>
                         <label for="message-text" class="col-form-label">Tárgy:</label> <input type="text" class="form-control" id="title">
 
      </div>
