@@ -255,7 +255,7 @@ $kapta = $row["megkapta"];
 
 
                     <h5 class="modal-title" id="exampleModalCenterTitle">Üzenet küldés:  <?php echo $kapname; ?> részére</h5>
-                        <label for="message-text" class="col-form-label">Tárgy:</label> <input type="text" class="form-control" id="title">
+                        <label for="message-text" class="col-form-label">Tárgy:</label> <input type="text" class="form-control" name="title">
 
      </div>
     <div class="modal-body"><div class="row">
@@ -271,7 +271,7 @@ $kapta = $row["megkapta"];
         <div class="row" >
             <div class="col-4" >
                 Tárgy: <br>
-        <input list="itemid" name="browser">
+        <input list="itemid" name="itemid">
         <datalist id="itemid" style=" max-height: 300px;overflow-y: auto;">
             <?php
             $sql = "SELECT raktar.itemid, raktar.itemcount, kaja.id, kaja.tipus, kaja.link, kaja.name 
@@ -289,7 +289,7 @@ $kapta = $row["megkapta"];
             </div>
             <div class="col-4" >
         Darabszám
-                <input list="itemcount" name="browser">
+                <input list="itemcount" name="itemcount">
         <datalist id="itemcount" style=" max-height: 300px;overflow-y: auto;">
             <option value="1">
             <option value="2">
@@ -307,7 +307,7 @@ $kapta = $row["megkapta"];
                 <div class="row">
 
                     <div class="col-6"> <button type="button" class="btn btn-info" style="font-weight: bold;min-width:100%;"disabled><i class='fas fa-gem' style='font-size:20px;color:white;'></i></button></div>
-                    <div class="col-6"><input type="text" class="form-control" id="bcoin"></div>
+                    <div class="col-6"><input type="text" class="form-control" name="bcoin"></div>
 
                 </div>
 
