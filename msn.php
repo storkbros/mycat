@@ -246,8 +246,8 @@ $kapta = $row["megkapta"];
             <div class="modal-content">
                 <div class="modal-header">
                     <form action="masssend.php">
-
-
+                        <input type="text" name="kapname" value="<?php echo $kapname; ?>" hidden >
+                        <input type="text" name="sendname" value="<?php echo $sendname; ?>" hidden >
 
 
 
@@ -261,7 +261,7 @@ $kapta = $row["megkapta"];
     <div class="modal-body"><div class="row">
             <div class="col">
                 <label for="message-text" class="col-form-label">Üzenet:</label>
-                <textarea class="form-control" id="message-text"></textarea>
+                <textarea class="form-control" id="text"></textarea>
 
             </div>
         </div>
