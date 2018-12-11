@@ -73,7 +73,17 @@
                      $addname= $_GET["add"];
                      $sql = " UPDATE friend SET barat= '1' WHERE name ='$userteszt' and name2 = '$addname';";
                      if ($conn->query($sql) === TRUE) {
-                         ?> <script language="JavaScript">document.location.href = "index.php?page=msn";</script> <?php
+
+                         $sql = "INSERT INTO friend (name, name2,barat)
+                         VALUES ('$addname','$userteszt','1')";
+
+                         if ($conn->query($sql) === TRUE) {
+                         } else {
+                         echo "Error: " . $sql . "<br>" . $conn->error;
+                                                      } ?>
+
+
+                         <script language="JavaScript">document.location.href = "index.php?page=msn";</script> <?php
                      } else { }
                  }
                  if ( isset($_GET["ki"]) && $_GET["ki"] <> "" ) {
