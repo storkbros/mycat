@@ -17,13 +17,13 @@
     <body>
         <?php
         if(in_array("topbar",$widgets)){
-            include_once $reldir."assets/widgets/topbar.php";
+            include_once $dir."assets/widgets/topbar.php";
         }
 
-        include $reldir."assets/pages/".$page;
+        include $dir."assets/pages/".$page;
 
         if(in_array("bottombar",$widgets)){
-            include_once $reldir."assets/widgets/bottombar.php";
+            include_once $dir."assets/widgets/bottombar.php";
         }
         ?>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
