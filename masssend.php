@@ -26,7 +26,7 @@ $itemid = $row["id"];
 $href = $row["link"];
 $itemname = $row["name"];
 echo $itemname;
-
+echo $itemcount;
 if ( $itemcount == "") { $itemcount = 0;}
 if ( $itemcount > 0 or $itemcount < 9999 ) { } else { $itemcount = 0;}
 $sql = "SELECT * FROM raktar WHERE name='$loginname' and itemid='$itemid';";
