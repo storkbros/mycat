@@ -1,4 +1,5 @@
 <?php
+include_once('db.php');
 include_once('session.php');
 $loginname=$login_session;
 $conn = new mysqli($servername, $username, $password, $dbname);
