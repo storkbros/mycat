@@ -245,7 +245,7 @@ $kapta = $row["megkapta"];
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <form action="masssend.php">
+                    <form action="masssend.php" method="post">
                         <input type="text" name="kapname" value="<?php echo $kapname; ?>" hidden >
                         <input type="text" name="sendname" value="<?php echo $sendname; ?>" hidden >
 
