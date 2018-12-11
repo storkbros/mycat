@@ -45,6 +45,13 @@ if ($conn->query($sql) === TRUE) {
 		} else {
 		echo "Error updating record: " . $conn->error;
 		}
+    $sql = "INSERT INTO friend ( name,name2,barat)
+		VALUES ('$username','Misiek','1')";
+    if ($conn->query($sql) === TRUE) {
+        echo "siker";
+    } else {
+        echo "Error updating record: " . $conn->error;
+    }
 	header("location:login.php?reg=siker");
 	
 	
