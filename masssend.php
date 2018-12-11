@@ -37,6 +37,20 @@ if ($result->num_rows > 0) {
 if ( $row["itemcount"] < $itemcount ) {
  $nemok = 1;
 }
+if ( $nemok == 0 and $itemcount <> 0 ) {
+    $itemcount = $row["itemcount"]-$itemcount;
+    $sql = " UPDATE raktar SET itemcount = '$itemcount' WHERE name = '$loginname' and itemid = '$itemid';";
+    if ($conn->query($sql) === TRUE) {
+    } else {
+
+        echo "Error updating record: " . $conn->error;
+
+    }
+
+
+}
+
+
 
 
 $bcoin = $_POST["bcoin"];
