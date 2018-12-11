@@ -1,3 +1,15 @@
+ <?php
+    include_once('session.php');
+    $loginname=$login_session;
+    $olvas=0;
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    mysqli_set_charset($conn,"utf8");
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    ?>
+
 <style>
     a:hover {
         text-decoration: none;
@@ -58,7 +70,7 @@
 
 
 
-         <div class ="col-6">
+         <div class="col-6" style="min-width: 350px;width:100%;">
              <table class="table table-hover table-dark">
     <tr >
         <th style="width:30px;"><i class="fa fa-envelope-square" style="font-size:24px;"></i></th>
@@ -67,27 +79,19 @@
         <th style="width:auto;">Dátum</th>
     </tr>
 
-    <?php
-    include_once('session.php');
-    $loginname=$login_session;
-    $olvas=0;
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    mysqli_set_charset($conn,"utf8");
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+   <?php
     $sql = "SELECT * FROM msn WHERE kapname ='$loginname';";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             ?>
-            <tr class='clickable-row' data-href='index.php?page=msn&olvas=<?php echo $row["id"]; ?>'>
+            <tr class='clickable-row' data-href='index.php?page=msn&olvas=<?php echo $row["id"];?>' style="cursor: pointer;">
                 <td class="check">
                    <?php if ( $row["uj"]== 1) { ?> <i class="fa fa-envelope" style="font-size:24px;color:white"></i> <?php } else { ?>
-                    <a href="index.php?page=msn&olvas=<?php echo $row["id"]; ?>" >     <i class="fa fa-envelope-o" style="font-size:24px;color:white"></i> <?php } ?> </a>
-                <td > <a href="index.php?page=msn&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["sendname"]; ?></a></td>
-                <td > <a href="index.php?page=msn&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["title"]; ?></a></td>
-                <td > <a href="index.php?page=msn&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["date"]; ?></a></td>
+                         <i class="fa fa-envelope-o" style="font-size:24px;color:white"></i> <?php } ?>
+                <td ><?php echo $row["sendname"]; ?></td>
+                <td > <?php echo $row["title"]; ?></td>
+                <td > <?php echo $row["date"]; ?></td>
             </tr>
 
 
