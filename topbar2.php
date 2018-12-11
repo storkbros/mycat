@@ -24,6 +24,7 @@ if ($result->num_rows > 0) {
     $ism = $row["ism"];
 } else {
     $ism = 0;
+
 }
 
 $sql = "SELECT * FROM users WHERE name='$userteszt'; ";
