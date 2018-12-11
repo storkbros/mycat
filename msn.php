@@ -202,6 +202,7 @@ $kapta = $row["megkapta"];
                     }
 
                     if ($row["uj"]== 1) {
+                        echo "he";
                         $sql = "SELECT * FROM users WHERE name='$loginname';";
                         $result = $conn->query($sql);
                         if ($result->num_rows > 0) {
@@ -226,13 +227,13 @@ $kapta = $row["megkapta"];
                         $sql = "SELECT * FROM raktar WHERE name='$loginname' and itemid = '$itemid';";
                         $result = $conn->query($sql);
                         if ($result->num_rows > 0) {
-                            $row = $result->fetch_assoc();
-                        } else {
+                            $row = $result->fetch_assoc(); echo "van";
+                        } else { echo "false";
                         }
 
                         $itemmm = $row["itemcount"] + $itemcount;
                         $sql = " UPDATE raktar SET itemcount = '$itemmm' WHERE name ='$userteszt' and itemid = '$itemid' ;";
-                        if ($conn->query($sql) === TRUE) {
+                        if ($conn->query($sql) === TRUE) { echo "update";
                         } else {
 
                             echo "Error updating record: " . $conn->error;
