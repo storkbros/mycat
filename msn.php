@@ -1,4 +1,11 @@
+<style>
+    a.hover {
+        text-decoration: none;
+        text-decoration-color: white;
+    }
 
+
+</style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="container" style="margin-top:10px;">
      <div class="row" >
