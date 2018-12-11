@@ -270,7 +270,7 @@ $kapta = $row["megkapta"];
         <hr>
         <div class="row" >
             <div class="col-4" >
-                Tárgy:
+                Tárgy: <br>
         <input list="itemid" name="browser">
         <datalist id="itemid" style=" max-height: 300px;overflow-y: auto;">
             <?php
