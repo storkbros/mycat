@@ -200,6 +200,7 @@ $kapta = $row["megkapta"];
                         echo "Error updating record: " . $conn->error;
 
                     }
+
                     if ($row["uj"]== 1) {
                         $sql = "SELECT * FROM users WHERE name='$loginname';";
                         $result = $conn->query($sql);
@@ -214,6 +215,21 @@ $kapta = $row["megkapta"];
 
 
                         $sql = " UPDATE users SET bcoin= '$bcoina', vipcoin='$vipcoina' WHERE name ='$userteszt' ;";
+                        if ($conn->query($sql) === TRUE) {
+                        } else {
+
+                            echo "Error updating record: " . $conn->error;
+
+                        }
+
+                        $sql = "SELECT * FROM raktar WHERE name='$loginname' and itemid = '$itemid';";
+                        $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                            $row = $result->fetch_assoc();
+                        } else {
+                        }
+                        $itemmm = $row["itemcount"] + $itemcount;
+                        $sql = " UPDATE raktar SET itemcount = '$itemmm' WHERE name ='$userteszt' and itemid = '$itemid' ;";
                         if ($conn->query($sql) === TRUE) {
                         } else {
 
