@@ -63,7 +63,35 @@ if ($result->num_rows > 0) {
 		<td id="fontos" style="text-align: center;cursor: pointer;"> <a href="index.php?page=proff&name=<?php echo $row["name"]; ?>" ><i class="material-icons"  style="width:25px;">&#xe7fe;</i></a> </td>
       </tr>
 	  
-<?php } } ?>
+<?php } }
+if ( isset($_GET["name"]) && $_GET["name"] <> "" ) {
+    $bename = $_GET["name"];
+    $sql = "SELECT * FROM friend WHERE name ='$loginname' and name2 = '$bename';";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+
+
+        ?> <script language="JavaScript">document.location.href = "index.php?page=msn";</script> <?php
+    } else {
+        $sql = "INSERT INTO friend (name, name2,barat)
+      VALUES ('$loginname','$bename','10')";
+
+        if ($conn->query($sql) === TRUE) {
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+
+
+    }
+
+
+}
+
+
+
+
+?>
     </tbody>
   </table>
 	
