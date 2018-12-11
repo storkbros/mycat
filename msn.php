@@ -272,7 +272,7 @@ $kapta = $row["megkapta"];
      $('#overlay').modal('show');
 
  </script>
-                 }
+             <?php    }
 ?>
 
 
