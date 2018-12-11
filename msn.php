@@ -198,7 +198,7 @@ $kapta = $row["megkapta"];
 
 
     </div>
-
+</div>
 
 </div>
     <script>
