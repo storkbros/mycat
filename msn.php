@@ -247,21 +247,21 @@ $kapta = $row["megkapta"];
                 <div class="modal-header">
                     <form>
 
-                            <label for="recipient-name" class="col-form-label">Recipient:</label>
-                            <input type="text" class="form-control" id="recipient-name">
 
 
 
 
 
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Üzenet : <?php echo $kapname; ?> Téma </h5>
+
+
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Üzenet küldés <?php echo $kapname; ?> Téma </h5> <input type="text" class="form-control" id="recipient-name">
          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
              <span aria-hidden="true">&times;</span>
          </button>
      </div>
     <div class="modal-body"><div class="row">
             <div class="col">
-                <label for="message-text" class="col-form-label">Message:</label>
+                <label for="message-text" class="col-form-label">Üzenet:</label>
                 <textarea class="form-control" id="message-text"></textarea>
 
             </div>
