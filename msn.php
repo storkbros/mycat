@@ -46,7 +46,7 @@
                  </thead>
                  <tbody>
                  <?php
-                 $sql = "SELECT * FROM friend WHERE name ='$loginname';";
+                 $sql = "SELECT * FROM friend WHERE name ='$loginname' and elut = '1';";
                  $result = $conn->query($sql);
                  if ($result->num_rows > 0) {
                      $i = 1;
