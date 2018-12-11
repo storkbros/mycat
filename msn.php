@@ -254,11 +254,9 @@ $kapta = $row["megkapta"];
 
 
 
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Üzenet küldés <?php echo $kapname; ?> részére.</h5>
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Üzenet küldés:  <?php echo $kapname; ?> részére.</h5>
                         <label for="message-text" class="col-form-label">Tárgy:</label> <input type="text" class="form-control" id="title">
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-             <span aria-hidden="true">&times;</span>
-         </button>
+
      </div>
     <div class="modal-body"><div class="row">
             <div class="col">
@@ -268,7 +266,14 @@ $kapta = $row["megkapta"];
             </div>
         </div>
         <br><hr>
-
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
         <br><hr>
 
 
