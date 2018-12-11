@@ -12,7 +12,7 @@ $kapname= $_POST["kapname"];
 $sendname= $_POST["sendname"];
 $title = $_POST["title"];
 $text = $_POST["text"];
-
+$bcoin = $_POST["bocin"];
 $itemid = $_POST["itemid"];
 $itemcount = $_POST["itemcount"];
 
