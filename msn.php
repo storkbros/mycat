@@ -163,7 +163,16 @@ $kapta = $row["megkapta"];
             </div>
         </div>
     </div>
+    <script>
+        $('#overlay').modal('show');
+
+    </script>
+
+<?php } ?>
+
      </div>
+
+
     <div class="col-6" >
 
         <table class="table table-hover table-dark">
@@ -201,12 +210,7 @@ $kapta = $row["megkapta"];
 </div>
 
 </div>
-    <script>
-        $('#overlay').modal('show');
 
-    </script>
-
-<?php } ?>
 
 
 
