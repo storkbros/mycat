@@ -2,14 +2,17 @@
     a:hover {
         text-decoration: none;
         text-decoration-color: white;
+        color: white;
     }
     a {
         text-decoration: none;
         text-decoration-color: white;
+        color: white;
     }
     a:link {
         text-decoration: none;
         text-decoration-color: white;
+        color: white;
     }
 
 
