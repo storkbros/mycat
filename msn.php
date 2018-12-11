@@ -55,8 +55,8 @@
                          <tr style="cursor: pointer;">
                              <td class="check"><?php echo $i; ?></td>
                              <td ><?php echo $row["name2"]; ?></td>
-                             <td > <?php echo $row["barat"]; ?><i class='fas fa-user' style='font-size:24px'></i></td>
-                             <td > <?php echo $row["barat"]; ?><i class="material-icons" style="font-size:24px">email</i></td>
+                             <td > <?php echo $row["barat"]; ?><i class='fas fa-user' style='font-size:24px;color:white'></i></td>
+                             <td > <?php echo $row["barat"]; ?><i class="material-icons" style="font-size:24px;color: white;">email</i></td>
                          </tr>
 
 
