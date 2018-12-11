@@ -60,7 +60,7 @@ if ($result->num_rows > 0) {
         <td id="fontos3" style="text-align: center;"><?php echo $row["catname"]; ?></td>
 		<td id="fontos" style="text-align: center;"><?php echo $row["catlvl"]; ?></td>
 		<td id="fontos" style="text-align: center;"><?php echo $row["catexp"]; ?></td>
-		<td id="fontos" style="text-align: center;cursor: pointer;"> <a href="index.php?page=proff&name=<?php echo $row["name"]; ?>" ><i class="material-icons"  style="width:25px;">&#xe7fe;</i></a> </td>
+		<td id="fontos" style="text-align: center;cursor: pointer;"> <a href="index.php?page=rangok&name=<?php echo $row["name"]; ?>" ><i class="material-icons"  style="width:25px;">&#xe7fe;</i></a> </td>
       </tr>
 	  
 <?php } }
