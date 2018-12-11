@@ -47,6 +47,9 @@ if ($page == "firstlogin") {
     } else {
 
     }
+    if ($page == "msnmaster") {
+
+    include 'mastermsn.php'; }
     if ($page == "index") {
         include 'profil.php';
         include 'acchiv.php';
