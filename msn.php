@@ -245,13 +245,26 @@ $kapta = $row["megkapta"];
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Üzenet : </h5>
+                    <form>
+
+                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+
+
+
+
+
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Üzenet : <?php echo $kapname; ?> Téma </h5>
          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
              <span aria-hidden="true">&times;</span>
          </button>
      </div>
     <div class="modal-body"><div class="row">
-            <div class="col">  </div>
+            <div class="col">
+                <label for="message-text" class="col-form-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+
+            </div>
         </div>
         <br><hr>
 
@@ -264,6 +277,7 @@ $kapta = $row["megkapta"];
     <div class="modal-footer">
 
         <a href="index.php?page=msn"><button type="button" class="btn btn-danger" >Bezárás</button></a>
+        </form>
     </div>
 </div>
  </div>
