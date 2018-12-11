@@ -287,6 +287,7 @@ $kapta = $row["megkapta"];
     </div>
 </div>
  </div>
+
  </div>
  <script>
      $('#overlay').modal('show');
