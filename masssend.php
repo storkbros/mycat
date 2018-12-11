@@ -18,7 +18,7 @@ $href = 'valami';
 $date = date("Y-m-d H:i:s");
 echo "<br>";
 
-$sql = "INSERT INTO MyGuests (sendname, kapname, title,szoveg,itemid,itemname,bcoin,date,href)
+$sql = "INSERT INTO msn (sendname, kapname, title,szoveg,itemid,itemname,bcoin,date,href)
 VALUES ('$sendname','$kapname','$title','$text','$itemid','$itemcount','$date','$href')";
 
 if ($conn->query($sql) === TRUE) {
