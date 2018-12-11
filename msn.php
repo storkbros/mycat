@@ -55,8 +55,8 @@
                          <tr style="text-align: center">
                              <td class="check"><?php echo $i; ?></td>
                              <td ><?php echo $row["name2"]; ?></td>
-                             <td > <?php if($row["barat"] == 10 ) { ?><i class="material-icons" style="font-size:24px;color:green;">check_box</i> <?php } else { ?><i class='fas fa-user' style='font-size:24px;color:white'></i> <?php } ?></td>
-                             <td > <?php if ($row["barat"] == 10 ) { ?><i class="material-icons" style="font-size:24px;color:red;">indeterminate_check_box</i> <?php } else { ?><i class="material-icons" style="font-size:24px;color: white;">email</i><?php }?></td>
+                             <td class='clickable-row' data-href='index.php?page=proff&name=<?php echo $row["name2"];?>' style="cursor: pointer;" > <?php if($row["barat"] == 10 ) { ?><i class="material-icons" style="font-size:24px;color:green;">check_box</i> <?php } else { ?><i class='fas fa-user' style='font-size:24px;color:white'></i> <?php } ?></td>
+                             <td class='clickable-row' data-href='index.php?page=msn&prof=<?php echo $row["name2id"];?>' style="cursor: pointer;" > <?php if ($row["barat"] == 10 ) { ?><i class="material-icons" style="font-size:24px;color:red;">indeterminate_check_box</i> <?php } else { ?><i class="material-icons" style="font-size:24px;color: white;">email</i><?php }?></td>
                          </tr>
 
 
@@ -73,7 +73,13 @@
                  ?>
                  </tbody>
              </table>
-
+             <script>
+                 jQuery(document).ready(function($) {
+                     $(".clickable-row").click(function() {
+                         window.location = $(this).data("href");
+                     });
+                 });
+             </script>
 
          </div>
 
