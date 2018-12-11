@@ -269,7 +269,8 @@ $kapta = $row["megkapta"];
         GIFT
         <hr>
         <div class="row" >
-            <div class="col-4" > Tárgy:
+            <div class="col-4" >
+                Tárgy:
         <input list="itemid" name="browser">
         <datalist id="itemid" style=" max-height: 300px;overflow-y: auto;">
             <?php
