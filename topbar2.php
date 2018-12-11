@@ -17,7 +17,14 @@ if ($result->num_rows > 0) {
 } else {
     $uzi = 0;
 }
-
+$sql = "SELECT COUNT(*) AS ism FROM friend WHERE name2='$userteszt'AND barat = '10';";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $ism = $row["ism"];
+} else {
+    $ism = 0;
+}
 
 $sql = "SELECT * FROM users WHERE name='$userteszt'; ";
 $result = $conn->query($sql);
@@ -89,8 +96,8 @@ $vipcoin = $row['vipcoin'];
 
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="margin-top:5px;">
                 <li class="nav-item" style="margin:5px;margin-top:10px;"><a href="#"><i class="material-icons"
-                                                                                        style="width:25px;color:white;">&#xe7fd;</i>
-                        <span class="badge badge-light">0</span></a></li>
+                                                                                        style="width:25px;color:<?php if ($ism > 0) { ?> red <?php } else { ?> white <?php } ?>;">&#xe7fd;</i>
+                        <span class="badge badge-light"><?php echo $ism; ?></span></a></li>
                 <li class="nav-item" style="margin:5px;margin-top:10px;"><a href="index.php?page=msn"><i class="material-icons"
                                                                                         style="width:25px;color:<?php if ($uzi > 0) { ?> red <?php } else { ?> white <?php } ?>;">&#xe0be;</i>
                         <span class="badge badge-light"><?php echo $uzi; ?></span></a></li>
