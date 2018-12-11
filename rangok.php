@@ -64,9 +64,9 @@ if ($result->num_rows > 0) {
       </tr>
 	  
 <?php } }
-    $bename = $_GET["name"];
-if ( isset($_GET["name"]) && $_GET["name"] <> "" and $bename <> $loginname ) {
 
+if ( isset($_GET["name"]) && $_GET["name"] <> "" and isset($_GET["name"]) && $_GET["name"] <> $loginname ) {
+    $bename = $_GET["name"];
     $sql = "SELECT * FROM friend WHERE name ='$loginname' and name2 = '$bename';";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
