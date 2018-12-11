@@ -288,7 +288,8 @@ $kapta = $row["megkapta"];
             </div>
             <div class="col-6" >
         Darabszám
-        <datalist id="browsers" style=" max-height: 300px;overflow-y: auto;">
+                <input list="itemcount" name="browser">
+        <datalist id="itemcount" style=" max-height: 300px;overflow-y: auto;">
             <option value="1">
             <option value="2">
             <option value="3">
@@ -296,7 +297,7 @@ $kapta = $row["megkapta"];
             <option value="5">
             <option value="10">
         </datalist>
-        <br><hr>
+
 
 
             </div>
