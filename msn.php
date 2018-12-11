@@ -269,7 +269,7 @@ $kapta = $row["megkapta"];
         GIFT
         <hr>
         <div class="row" >
-            <div class="col-6" >
+            <div class="col-4" >
         <input list="itemid" name="browser">
         <datalist id="itemid" style=" max-height: 300px;overflow-y: auto;">
             <?php
@@ -286,7 +286,7 @@ $kapta = $row["megkapta"];
             <?php } } ?>
         </datalist>
             </div>
-            <div class="col-6" >
+            <div class="col-4" >
         Darabszám
                 <input list="itemcount" name="browser">
         <datalist id="itemcount" style=" max-height: 300px;overflow-y: auto;">
@@ -297,6 +297,16 @@ $kapta = $row["megkapta"];
             <option value="5">
             <option value="10">
         </datalist>
+
+
+
+            </div>
+            <div class="col-4" >
+                <div class="row">
+                    <div class="col-6"> <button type="button" class="btn btn-info" style="font-weight: bold;min-width:100%;"disabled><i class='fas fa-gem' style='font-size:20px;color:white;'></i></button></div>
+                    <div class="col-6"><input type="text" class="form-control" id="bcoin"></div>
+
+                </div>
 
 
 
