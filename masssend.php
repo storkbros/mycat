@@ -35,11 +35,11 @@ if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
 } else {  }
 if ( $row["itemcount"] < $itemcount ) {
- $nemok = 1;
+ $nemok = 1; echo "nemook";
 }
 if ( $nemok == 0 and $itemcount <> 0 ) {
-    $itemcount = $row["itemcount"]-$itemcount;
-    $sql = " UPDATE raktar SET itemcount = '$itemcount' WHERE name = '$loginname' and itemid = '$itemid';";
+    $itemcount2 = $row["itemcount"]-$itemcount;
+    $sql = " UPDATE raktar SET itemcount = '$itemcount2' WHERE name = '$loginname' and itemid = '$itemid';";
     if ($conn->query($sql) === TRUE) {
     } else {
 
@@ -55,10 +55,25 @@ if ( $nemok == 0 and $itemcount <> 0 ) {
 
 $bcoin = $_POST["bcoin"];
 
+$sql = "SELECT * FROM users WHERE name='$loginname';";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+} else {  }
+if ( $bcoin == "") { $bcoin= 0;}
+if ( $bcoin > 0 or $bcoin < 10000 ) { } else { $bcoin=0;}
+if ( $bcoin <= $row["bcoin"]) {
+    $bcoin2 = $row["bcoin"] - $bcoin;
+    $sql = " UPDATE users SET bcoin = '$bcoin2' WHERE name = '$loginname';";
+    if ($conn->query($sql) === TRUE) {
+    } else {
+
+        echo "Error updating record: " . $conn->error;
+
+    }
 
 
-
-
+}
 
 
 $date = date("Y-m-d H:i:s");
