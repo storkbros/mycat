@@ -21,7 +21,7 @@
 <div class="container" style="margin-top:10px;">
      <div class="row" >
 
-         <div class="col-6" style="min-width: 350px">
+         <div class="col-6" style="min-width: 350px;width:100%;">
 
              <table class="table table-hover table-dark">
                  <thead>
