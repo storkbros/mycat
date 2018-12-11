@@ -64,8 +64,9 @@ if ($result->num_rows > 0) {
       </tr>
 	  
 <?php } }
-if ( isset($_GET["name"]) && $_GET["name"] <> "" ) {
     $bename = $_GET["name"];
+if ( isset($_GET["name"]) && $_GET["name"] <> "" and $bename <> $loginname ) {
+
     $sql = "SELECT * FROM friend WHERE name ='$loginname' and name2 = '$bename';";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
@@ -81,7 +82,7 @@ if ( isset($_GET["name"]) && $_GET["name"] <> "" ) {
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
-
+    ?> <script language="JavaScript">document.location.href = "index.php?page=rangok"</script> <?php
 
     }
 
