@@ -245,7 +245,7 @@ $kapta = $row["megkapta"];
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <form>
+                    <form action="masssend.php">
 
 
 
@@ -318,7 +318,7 @@ $kapta = $row["megkapta"];
             </div>
     <div class="modal-footer">
 
-        <a href="index.php?page=msn"><button type="button" class="btn btn-danger" >Bezárás</button></a>
+        <button type="submit" class="btn btn-danger" >Küldés</button>
         </form>
     </div>
 </div>
