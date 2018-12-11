@@ -19,7 +19,7 @@ $date = date("Y-m-d H:i:s");
 echo "<br>";
 
 $sql = "INSERT INTO msn (sendname, kapname, title,szoveg,itemid,itemname,bcoin,date,href)
-VALUES ('$sendname','$kapname','$title','$text','$itemid','$itemcount','$date','$href')";
+VALUES ('$sendname','$kapname','$title','$text','$itemid','$itemcount','$bcoin','$date','$href')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
