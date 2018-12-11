@@ -261,7 +261,8 @@ $kapta = $row["megkapta"];
     <div class="modal-body"><div class="row">
             <div class="col">
                 <label for="message-text" class="col-form-label">Üzenet:</label>
-                <textarea class="form-control" id="text"></textarea>
+
+                <textarea class="form-control" name="text" id="text"></textarea>
 
             </div>
         </div>
