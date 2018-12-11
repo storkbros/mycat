@@ -16,6 +16,10 @@ $nemok = 0;
 
 $itemid = $_POST["itemid"];
 $itemcount = $_POST["itemcount"];
+
+echo $itemcount;
+echo "<br>";
+echo $itemid;
 if ( $itemcount == "") { $itemcount = 0;}
 if ( $itemcount > 0 or $itemcount < 9999 ) { } else { $itemcount = 0;}
 $sql = "SELECT * FROM raktar WHERE name='$loginname' and itemid='$itemid';";
