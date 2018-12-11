@@ -267,7 +267,7 @@ $kapta = $row["megkapta"];
         </div>
         <br><hr>
         <input list="browsers" name="browser">
-        <datalist id="browsers">
+        <datalist id="browsers" style=" max-height: 300px;overflow-y: auto;">
             <?php
             $sql = "SELECT raktar.itemid, raktar.itemcount, kaja.id, kaja.tipus, kaja.link, kaja.name 
             FROM kaja
