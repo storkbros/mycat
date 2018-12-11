@@ -81,6 +81,9 @@ if ($page == "firstlogin") {
     if ($page == "craft") {
         include 'craft.php';
     }
+    if ($page == "new") {
+        include 'new.php';
+    }
 }
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
