@@ -76,11 +76,11 @@
             ?>
           <tr>
                 <td class="check">
-                   <?php if ( $row["uj"]== 1) { ?> <i class="fa fa-envelope" style="font-size:24px;color:#091534"></i> <?php } else { ?>
-                    <a href="index.php?page=msn&olvas=<?php echo $row["id"]; ?>" >     <i class="fa fa-envelope-o" style="font-size:24px;color:#091534"></i> <?php } ?> </a>
-                <td class="check"> <a href="index.php?page=msn&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["sendname"]; ?></a></td>
-                <td class="check"> <a href="index.php?page=msn&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["title"]; ?></a></td>
-                <td class="check"> <a href="index.php?page=msn&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["date"]; ?></a></td>
+                   <?php if ( $row["uj"]== 1) { ?> <i class="fa fa-envelope" style="font-size:24px;color:white"></i> <?php } else { ?>
+                    <a href="index.php?page=msn&olvas=<?php echo $row["id"]; ?>" >     <i class="fa fa-envelope-o" style="font-size:24px;color:white"></i> <?php } ?> </a>
+                <td > <a href="index.php?page=msn&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["sendname"]; ?></a></td>
+                <td > <a href="index.php?page=msn&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["title"]; ?></a></td>
+                <td > <a href="index.php?page=msn&olvas=<?php echo $row["id"]; ?>" ><?php echo $row["date"]; ?></a></td>
             </tr>
 
 
