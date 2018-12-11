@@ -1,5 +1,5 @@
 <style>
-    a.hover {
+    a:hover {
         text-decoration: none;
         text-decoration-color: white;
     }
