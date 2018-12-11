@@ -140,7 +140,7 @@ $kapta = $row["megkapta"];
 
 <?php } ?>
 
-     </div>
+
 
 
     <div class="col-6" >
