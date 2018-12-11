@@ -266,6 +266,8 @@ $kapta = $row["megkapta"];
             </div>
         </div>
         <br>
+        <hr>
+
         GIFT
         <hr>
         <div class="row" >
@@ -304,6 +306,7 @@ $kapta = $row["megkapta"];
             </div>
             <div class="col-4" >
                 <div class="row">
+                    Gyémánt küldés: <br>
                     <div class="col-6"> <button type="button" class="btn btn-info" style="font-weight: bold;min-width:100%;"disabled><i class='fas fa-gem' style='font-size:20px;color:white;'></i></button></div>
                     <div class="col-6"><input type="text" class="form-control" id="bcoin"></div>
 
@@ -314,7 +317,7 @@ $kapta = $row["megkapta"];
             </div>
         </div>
             </div>
-
+                <hr>
     <div class="modal-footer">
 
         <a href="index.php?page=msn"><button type="button" class="btn btn-danger" >Bezárás</button></a>
