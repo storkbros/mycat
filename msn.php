@@ -212,7 +212,7 @@ $kapta = $row["megkapta"];
                     }
 
                     if ($row["uj"]== 1) {
-                        echo "he";
+
                         $sql = "SELECT * FROM users WHERE name='$loginname';";
                         $result = $conn->query($sql);
                         if ($result->num_rows > 0) {
