@@ -49,7 +49,8 @@ if ( $nemok == 0 and $itemcount <> 0 ) {
 
 
 }
-
+if ( $text=="") { $text = "nincs szöveg";}
+if ( $title=="" ) { $title = "üres";}
 
 
 
@@ -73,7 +74,7 @@ if ( $bcoin <= $row["bcoin"]) {
     }
 
 
-}
+} else { $bcoin =0;}
 
 
 $date = date("Y-m-d H:i:s");
