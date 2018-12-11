@@ -222,18 +222,17 @@ $kapta = $row["megkapta"];
                             echo "Error updating record: " . $conn->error;
 
                         }
-                        echo $itemid;
-                        echo $itemcount;
+
                         $sql = "SELECT * FROM raktar WHERE name='$loginname' and itemid = '$itemid';";
                         $result = $conn->query($sql);
                         if ($result->num_rows > 0) {
-                            $row = $result->fetch_assoc(); echo "van";
-                        } else { echo "false";
+                            $row = $result->fetch_assoc();
+                        } else {
                         }
 
                         $itemmm = $row["itemcount"] + $itemcount;
                         $sql = " UPDATE raktar SET itemcount = '$itemmm' WHERE name ='$userteszt' and itemid = '$itemid' ;";
-                        if ($conn->query($sql) === TRUE) { echo "update";
+                        if ($conn->query($sql) === TRUE) {
                         } else {
 
                             echo "Error updating record: " . $conn->error;
