@@ -1,40 +1,10 @@
-<style>
-    tr.teszt {
-        background-color:#396EFE;
-        cursor: pointer;
 
-    }
-    td {
-        background-color:#e9e9ed	;
-        border:none;
-        cursor: pointer;
-    }
-    td.check {
-        background-color:#e9e9ed	;
-        border:none;
-        color: black;
-        cursor: pointer;
-        text-decoration: none;
-    }
-
-    th {
-        background-color:#b4bcc0;
-        border:none;
-        color:black;
-    }
-
-    table {
-        border-collapse: collapse;
-
-    }
-
-</style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="container" style="margin-top:10px;">
      <div class="row" >
          <div class ="col-6">
-<table style="width:auto;text-align:center;min-width:50%;font-color:#091534">
-    <tr class="teszt">
+             <table class="table table-hover table-dark">
+    <tr >
         <th style="width:30px;"><i class="fa fa-envelope-square" style="font-size:24px;"></i></th>
         <th>Feladó</th>
         <th>Téma</th>
