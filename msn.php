@@ -72,12 +72,14 @@
                      $addname= $_GET["add"];
                      $sql = " UPDATE friend SET barat= '1' WHERE name ='$userteszt' and name2 = '$addname';";
                      if ($conn->query($sql) === TRUE) {
+                         header("location:index.php?page=msn");
                      } else { }
                  }
                  if ( isset($_GET["del"]) && $_GET["del"] <> "" ) {
                      $addname= $_GET["del"];
                      $sql = " UPDATE friend SET barat= '2' WHERE name ='$userteszt' and name2 = '$addname';";
                      if ($conn->query($sql) === TRUE) {
+                         header("location:index.php?page=msn");
                      } else { }
                  }
 
