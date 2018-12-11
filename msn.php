@@ -52,11 +52,11 @@
                      $i = 0;
                      while($row = $result->fetch_assoc()) {
                          ?>
-                         <tr style="cursor: pointer;">
+                         <tr style="">
                              <td class="check"><?php echo $i; ?></td>
                              <td ><?php echo $row["name2"]; ?></td>
-                             <td > <?php echo $row["barat"]; ?><i class='fas fa-user' style='font-size:24px;color:white'></i></td>
-                             <td > <?php echo $row["barat"]; ?><i class="material-icons" style="font-size:24px;color: white;">email</i></td>
+                             <td > <?php if($row["barat"] == 10 ) { ?><i class="material-icons" style="font-size:24px;color:green">check_box</i> <?php } else { ?><i class='fas fa-user' style='font-size:24px;color:white'></i> <?php } ?></td>
+                             <td > <?php if ($row["barat"] == 10 ) { ?><i class="material-icons" style="font-size:36px">indeterminate_check_box</i> <?php } else { ?><i class="material-icons" style="font-size:24px;color: white;">email</i><?php }?></td>
                          </tr>
 
 
