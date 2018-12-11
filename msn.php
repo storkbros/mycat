@@ -229,6 +229,7 @@ $kapta = $row["megkapta"];
                             $row = $result->fetch_assoc();
                         } else {
                         }
+
                         $itemmm = $row["itemcount"] + $itemcount;
                         $sql = " UPDATE raktar SET itemcount = '$itemmm' WHERE name ='$userteszt' and itemid = '$itemid' ;";
                         if ($conn->query($sql) === TRUE) {
