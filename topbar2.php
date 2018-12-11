@@ -96,7 +96,7 @@ $vipcoin = $row['vipcoin'];
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="margin-top:5px;">
-                <li class="nav-item" style="margin:5px;margin-top:10px;"><a href="#"><i class="material-icons"
+                <li class="nav-item" style="margin:5px;margin-top:10px;"><a href="index.php?page=msn"><i class="material-icons"
                                                                                         style="width:25px;color:<?php if ($ism > 0) { ?> red <?php } else { ?> white <?php } ?>;">&#xe7fd;</i>
                         <span class="badge badge-light"><?php echo $ism; ?></span></a></li>
                 <li class="nav-item" style="margin:5px;margin-top:10px;"><a href="index.php?page=msn"><i class="material-icons"
