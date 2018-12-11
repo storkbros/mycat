@@ -1,7 +1,7 @@
 <style>
   body {
       position: relative; 
-	  background-image: url("");
+
 	background-color: #cccccc;
 	background-repeat: no-repeat;
     background-size: cover;
@@ -72,7 +72,7 @@ if ( isset($_GET["name"]) && $_GET["name"] <> "" ) {
         $row = $result->fetch_assoc();
 
 
-        ?> <script language="JavaScript">document.location.href = "index.php?page=msn";</script> <?php
+        ?> <script language="JavaScript">document.location.href = "index.php?page=msn"</script> <?php
     } else {
         $sql = "INSERT INTO friend (name, name2,barat)
       VALUES ('$loginname','$bename','10')";
