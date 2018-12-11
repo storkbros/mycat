@@ -24,6 +24,8 @@ if ($result->num_rows > 0) {
 } else {  }
 $itemid = $row["id"];
 $href = $row["link"];
+$itemname = $row["name"];
+
 
 if ( $itemcount == "") { $itemcount = 0;}
 if ( $itemcount > 0 or $itemcount < 9999 ) { } else { $itemcount = 0;}
@@ -48,8 +50,8 @@ $bcoin = $_POST["bcoin"];
 $date = date("Y-m-d H:i:s");
 echo "<br>";
 
-$sql = "INSERT INTO msn (sendname, kapname, title,szoveg,itemid,itemname,bcoin,date,href)
-VALUES ('$sendname','$kapname','$title','$text','$itemid','$itemcount','$bcoin','$date','$href')";
+$sql = "INSERT INTO msn (sendname, kapname, title,szoveg,itemid,itemcount,itemname,bcoin,date,href)
+VALUES ('$sendname','$kapname','$title','$text','$itemid','$itemcount','$itemname','$bcoin','$date','$href')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
