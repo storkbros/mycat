@@ -13,7 +13,7 @@ $text = $_POST["text"];
 $itemid = $_POST["itemid"];
 $itemcount = $_POST["itemcount"];
 $bcoin = $_POST["bcoin"];
-$href = $_POST["href"];
+$href = 'valami';
 $date = date("Y-m-d H:i:s");
 echo "<br>";
 
