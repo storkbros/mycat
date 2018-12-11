@@ -7,6 +7,10 @@
         text-decoration: none;
         text-decoration-color: white;
     }
+    a:link {
+        text-decoration: none;
+        text-decoration-color: white;
+    }
 
 
 </style>
