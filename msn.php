@@ -37,7 +37,7 @@
 
              <table class="table table-hover table-dark">
                  <thead>
-                 <tr>
+                 <tr style="text-align: center">
                      <th scope="col">#</th>
                      <th scope="col">Barátlista</th>
                      <th scope="col">#</th>
@@ -72,14 +72,14 @@
                      $addname= $_GET["add"];
                      $sql = " UPDATE friend SET barat= '1' WHERE name ='$userteszt' and name2 = '$addname';";
                      if ($conn->query($sql) === TRUE) {
-                         header("location:index.php?page=msn");
+                         ?> <script language="JavaScript">document.location.href = "index.php?page=msn";</script> <?php
                      } else { }
                  }
                  if ( isset($_GET["del"]) && $_GET["del"] <> "" ) {
                      $addname= $_GET["del"];
                      $sql = " UPDATE friend SET barat= '2' WHERE name ='$userteszt' and name2 = '$addname';";
                      if ($conn->query($sql) === TRUE) {
-                         header("location:index.php?page=msn");
+                         ?> <script language="JavaScript">document.location.href = "index.php?page=msn";</script> <?php
                      } else { }
                  }
 
