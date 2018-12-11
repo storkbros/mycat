@@ -81,7 +81,7 @@
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             ?>
-          <tr>
+            <tr class='clickable-row' data-href='index.php?page=msn&olvas=<?php echo $row["id"]; ?>'>
                 <td class="check">
                    <?php if ( $row["uj"]== 1) { ?> <i class="fa fa-envelope" style="font-size:24px;color:white"></i> <?php } else { ?>
                     <a href="index.php?page=msn&olvas=<?php echo $row["id"]; ?>" >     <i class="fa fa-envelope-o" style="font-size:24px;color:white"></i> <?php } ?> </a>
@@ -102,6 +102,12 @@
 
     }
     ?>
+                 jQuery(document).ready(function($) {
+                 $(".clickable-row").click(function() {
+                 window.location = $(this).data("href");
+                 });
+                 });
+
 </table>
 </div>
 
