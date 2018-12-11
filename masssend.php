@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
 $itemid = $row["id"];
 $href = $row["link"];
 $itemname = $row["name"];
-
+echo $itemname;
 
 if ( $itemcount == "") { $itemcount = 0;}
 if ( $itemcount > 0 or $itemcount < 9999 ) { } else { $itemcount = 0;}
