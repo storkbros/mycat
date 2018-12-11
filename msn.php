@@ -284,7 +284,7 @@ $kapta = $row["megkapta"];
             <?php } } ?>
         </datalist>
         Darabszám
-        <input type="text" class="form-control" id="title">
+        <input type="text" class="form-control" id="count" style="max-width: 50px;">
         <br><hr>
 
 
