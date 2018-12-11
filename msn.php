@@ -78,7 +78,7 @@
                  }
                  if ( isset($_GET["ki"]) && $_GET["ki"] <> "" ) {
                      $addname= $_GET["ki"];
-                     $sql = " UPDATE friend SET barat= '2' WHERE name ='$userteszt' and name2 = '$addname';";
+                     $sql = " UPDATE friend SET barat= '2', elut='2' WHERE name ='$userteszt' and name2 = '$addname';";
                      if ($conn->query($sql) === TRUE) {
                          ?> <script language="JavaScript">document.location.href = "index.php?page=msn";</script> <?php
                      } else { }
