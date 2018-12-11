@@ -268,11 +268,18 @@ $kapta = $row["megkapta"];
         <br><hr>
         <input list="browsers" name="browser">
         <datalist id="browsers">
-            <option value="Internet Explorer">
-            <option value="Firefox">
-            <option value="Chrome">
-            <option value="Opera">
-            <option value="Safari">
+            <?php
+            $sql = "SELECT raktar.itemid, raktar.itemcount, kaja.id, kaja.tipus, kaja.link, kaja.name 
+            FROM kaja
+            INNER JOIN raktar 
+             ON kaja.id=raktar.itemid
+            WHERE raktar.name='$login_session';";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) { ?>
+
+            <option value="<?php echo $row["name"]; ?>">
+            <?php } } ?>
         </datalist>
         <br><hr>
 
