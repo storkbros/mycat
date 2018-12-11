@@ -40,8 +40,8 @@
                  <tr style="text-align: center">
                      <th scope="col">#</th>
                      <th scope="col">Barátlista</th>
-                     <th scope="col">#</th>
-                     <th scope="col">#</th>
+                     <th scope="col"></th>
+                     <th scope="col"></th>
                  </tr>
                  </thead>
                  <tbody>
