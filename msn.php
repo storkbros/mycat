@@ -56,7 +56,7 @@
                              <td class="check"><?php echo $i; ?></td>
                              <td ><?php echo $row["name2"]; ?></td>
                              <td class='clickable-row'  data-href=' <?php if ( $row["barat"] == 1 ) { ?>index.php?page=proff&name=<?php echo $row["name2"]; } else {?>index.php?page=msn&add=<?php echo $row["name2"]; }?>' style="cursor: pointer;" > <?php if($row["barat"] == 10 ) { ?><i class="material-icons" style="font-size:24px;color:green;">check_box</i> <?php } else { ?><i class='fas fa-user' style='font-size:24px;color:white'></i> <?php } ?></td>
-                             <td class='clickable-row' data-href=<?php if ( $row["barat"] == 1 ) { ?>index.php?page=msn&mass=<?php echo $row["name2"]; } else {?>index.php?page=msn&del=<?php echo $row["name2"]; }?>' style="cursor: pointer;" > <?php if ($row["barat"] == 10 ) { ?><i class="material-icons" style="font-size:24px;color:red;">indeterminate_check_box</i> <?php } else { ?><i class="material-icons" style="font-size:24px;color: white;">email</i><?php }?></td>
+                             <td class='clickable-row' data-href=<?php if ( $row["barat"] == 1 ) { ?>index.php?page=msn&mass=<?php echo $row["name2"]; } else {?>index.php?page=msn&ki<?php echo $row["name2"]; }?>' style="cursor: pointer;" > <?php if ($row["barat"] == 10 ) { ?><i class="material-icons" style="font-size:24px;color:red;">indeterminate_check_box</i> <?php } else { ?><i class="material-icons" style="font-size:24px;color: white;">email</i><?php }?></td>
                          </tr>
 
 
@@ -75,8 +75,8 @@
                          ?> <script language="JavaScript">document.location.href = "index.php?page=msn";</script> <?php
                      } else { }
                  }
-                 if ( isset($_GET["del"]) && $_GET["del"] <> "" ) {
-                     $addname= $_GET["del"];
+                 if ( isset($_GET["ki"]) && $_GET["ki"] <> "" ) {
+                     $addname= $_GET["ki"];
                      $sql = " UPDATE friend SET barat= '2' WHERE name ='$userteszt' and name2 = '$addname';";
                      if ($conn->query($sql) === TRUE) {
                          ?> <script language="JavaScript">document.location.href = "index.php?page=msn";</script> <?php
