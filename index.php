@@ -27,7 +27,6 @@
             background-attachment: fixed;
             padding-top: 0px;
             margin-top: 0px;
-
         }
     </style>
 </head>
