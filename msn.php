@@ -3,6 +3,10 @@
         text-decoration: none;
         text-decoration-color: white;
     }
+    a {
+        text-decoration: none;
+        text-decoration-color: white;
+    }
 
 
 </style>
