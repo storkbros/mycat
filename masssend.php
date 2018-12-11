@@ -16,20 +16,36 @@ $nemok = 0;
 
 $itemid = $_POST["itemid"];
 $itemcount = $_POST["itemcount"];
+if ( $itemcount == "") { $itemcount = 0;}
+if ( $itemcount > 0 or $itemcount < 9999 ) { } else { $itemcount = 0;}
 $sql = "SELECT * FROM raktar WHERE name='$loginname' and itemid='$itemid';";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
 } else {  }
-if ( $itemcount == "") { $itemcount = 0;}
-if ( $itemcount > 0 or $itemcount < 9999 ) { } else { $itemcount = 0;}
 if ( $row["itemcount"] < $itemcount ) {
  $nemok = 1;
 }
+if ( $itemcount > 0) {
+    $sql = "SELECT * FROM raktar WHERE name='$loginname' and itemid='$itemid';";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+    } else {
+    }
+    $href = $row["link"];
+} else { $href = "";}
+
 
 
 $bcoin = $_POST["bcoin"];
-$href = 'valami';
+
+
+
+
+
+
+
 $date = date("Y-m-d H:i:s");
 echo "<br>";
 
