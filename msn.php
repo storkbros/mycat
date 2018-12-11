@@ -39,29 +39,37 @@
                  <thead>
                  <tr>
                      <th scope="col">#</th>
-                     <th scope="col">First</th>
-                     <th scope="col">Last</th>
-                     <th scope="col">Handle</th>
+                     <th scope="col">Barátlista</th>
+                     <th scope="col">#</th>
+                     <th scope="col">#</th>
                  </tr>
                  </thead>
                  <tbody>
-                 <tr>
-                     <th scope="row">1</th>
-                     <td>Mark</td>
-                     <td>Otto</td>
-                     <td>@mdo</td>
-                 </tr>
-                 <tr>
-                     <th scope="row">2</th>
-                     <td>Jacob</td>
-                     <td>Thornton</td>
-                     <td>@fat</td>
-                 </tr>
-                 <tr>
-                     <th scope="row">3</th>
-                     <td colspan="2">Larry the Bird</td>
-                     <td>@twitter</td>
-                 </tr>
+                 <?php
+                 $sql = "SELECT * FROM friend WHERE name ='$loginname';";
+                 $result = $conn->query($sql);
+                 if ($result->num_rows > 0) {
+                     while($row = $result->fetch_assoc()) {
+                         ?>
+                         <tr style="cursor: pointer;">
+                             <td class="check"></td>
+                             <td ><?php echo $row["name2"]; ?></td>
+                             <td > <?php echo $row["barat"]; ?></td>
+                             <td > <?php echo $row["barat"]; ?></td>
+                         </tr>
+
+
+
+
+
+                         <?php
+
+
+                     }
+                 } else {
+
+                 }
+                 ?>
                  </tbody>
              </table>
 
@@ -88,7 +96,7 @@
             <tr class='clickable-row' data-href='index.php?page=msn&olvas=<?php echo $row["id"];?>' style="cursor: pointer;">
                 <td class="check">
                    <?php if ( $row["uj"]== 1) { ?> <i class="fa fa-envelope" style="font-size:24px;color:white"></i> <?php } else { ?>
-                         <i class="fa fa-envelope-o" style="font-size:24px;color:white"></i> <?php } ?>
+                         <i class="fa fa-envelope-o" style="font-size:24px;color:white"></i> <?php } ?></td>
                 <td ><?php echo $row["sendname"]; ?></td>
                 <td > <?php echo $row["title"]; ?></td>
                 <td > <?php echo $row["date"]; ?></td>
@@ -102,7 +110,7 @@
 
 
         }
-    } else { echo "nincs";
+    } else {
 
     }
     ?>
@@ -147,9 +155,8 @@ $kapta = $row["megkapta"];
                     </div>
                     <br><hr>
                     <?php if ($row["itemid"] <> 0 ) { ?>
-                        x <?php echo $itemcount; ?>
+                       Ajándékod  <?php echo $itemcount; ?> darab
                         <img class="card-img-top" src="image/Food/<?php echo $href; ?>" alt="Card image" style="width:100%;max-height:245px;max-width:50px;min-height:50px">
-                        Te kaptál tőle <?php echo $itemname; echo " "; echo $itemcount; echo " darabot"; ?>
                         <?php }?>
                     <br><hr>
                     <?php if ( $bcoin <> 0 ) { ?> <button type="button" class="btn btn-info" style="font-weight: bold;min-width:100%;"disabled><i class='fas fa-gem' style='font-size:20px;color:white;'></i> + <?php echo $bcoin ?></button>   <?php } ?>
