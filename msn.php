@@ -221,7 +221,8 @@ $kapta = $row["megkapta"];
                             echo "Error updating record: " . $conn->error;
 
                         }
-
+                        echo $itemid;
+                        echo $itemcount;
                         $sql = "SELECT * FROM raktar WHERE name='$loginname' and itemid = '$itemid';";
                         $result = $conn->query($sql);
                         if ($result->num_rows > 0) {
