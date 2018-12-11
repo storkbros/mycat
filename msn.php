@@ -49,10 +49,10 @@
                  $sql = "SELECT * FROM friend WHERE name ='$loginname';";
                  $result = $conn->query($sql);
                  if ($result->num_rows > 0) {
-                     $i = 0;
+                     $i = 1;
                      while($row = $result->fetch_assoc()) {
                          ?>
-                         <tr style="">
+                         <tr style="text-align: center">
                              <td class="check"><?php echo $i; ?></td>
                              <td ><?php echo $row["name2"]; ?></td>
                              <td > <?php if($row["barat"] == 10 ) { ?><i class="material-icons" style="font-size:24px;color:green;">check_box</i> <?php } else { ?><i class='fas fa-user' style='font-size:24px;color:white'></i> <?php } ?></td>
