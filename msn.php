@@ -49,13 +49,14 @@
                  $sql = "SELECT * FROM friend WHERE name ='$loginname';";
                  $result = $conn->query($sql);
                  if ($result->num_rows > 0) {
+                     $i = 0;
                      while($row = $result->fetch_assoc()) {
                          ?>
                          <tr style="cursor: pointer;">
-                             <td class="check"></td>
+                             <td class="check"><?php echo $i; ?></td>
                              <td ><?php echo $row["name2"]; ?></td>
-                             <td > <?php echo $row["barat"]; ?></td>
-                             <td > <?php echo $row["barat"]; ?></td>
+                             <td > <?php echo $row["barat"]; ?><i class='fas fa-user' style='font-size:24px'></i></td>
+                             <td > <?php echo $row["barat"]; ?><i class="material-icons" style="font-size:24px">email</i></td>
                          </tr>
 
 
