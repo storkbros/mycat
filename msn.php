@@ -277,9 +277,4 @@ $kapta = $row["megkapta"];
 
 
 </div>
-
 </div>
-
-
-
-
