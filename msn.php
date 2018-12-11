@@ -268,8 +268,10 @@ $kapta = $row["megkapta"];
         <br>
         GIFT
         <hr>
-        <input list="browsers" name="browser">
-        <datalist id="browsers" style=" max-height: 300px;overflow-y: auto;">
+        <div class="row" >
+            <div class="col-6" >
+        <input list="itemid" name="browser">
+        <datalist id="itemid" style=" max-height: 300px;overflow-y: auto;">
             <?php
             $sql = "SELECT raktar.itemid, raktar.itemcount, kaja.id, kaja.tipus, kaja.link, kaja.name 
             FROM kaja
@@ -283,14 +285,24 @@ $kapta = $row["megkapta"];
             <option value="<?php echo $row["name"]; ?>">
             <?php } } ?>
         </datalist>
+            </div>
+            <div class="col-6" >
         Darabszám
-        <input type="text" class="form-control" id="count" style="max-width: 50px;">
+        <datalist id="browsers" style=" max-height: 300px;overflow-y: auto;">
+            <option value="1">
+            <option value="2">
+            <option value="3">
+            <option value="4">
+            <option value="5">
+            <option value="10">
+        </datalist>
         <br><hr>
 
 
+            </div>
+        </div>
+            </div>
 
-
-    </div>
     <div class="modal-footer">
 
         <a href="index.php?page=msn"><button type="button" class="btn btn-danger" >Bezárás</button></a>
