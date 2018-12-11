@@ -76,7 +76,7 @@ if ( isset($_GET["name"]) && $_GET["name"] <> "" and isset($_GET["name"]) && $_G
         ?> <script language="JavaScript">document.location.href = "index.php?page=msn"</script> <?php
     } else {
         $sql = "INSERT INTO friend (name, name2,barat)
-      VALUES ('$loginname','$bename','10')";
+      VALUES ('$bename','$loginname','10')";
 
         if ($conn->query($sql) === TRUE) {
         } else {
