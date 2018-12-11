@@ -1,11 +1,11 @@
 <?php
-require_once $dir . "system/db/db.php";
+require_once $dir . "system/db/database.php";
 require_once $dir . "system/controller/session.php";
 
 $widgets = array();
+$page = '';
 
 //$widgets[] = "topbar";
-
 $title = "MyCat";
 if ($logged) {
     $page = 'home.php';
@@ -31,4 +31,5 @@ if ($logged) {
     $page = "login";
     //todo reg
 }
+include_once $dir . "system/model/pages/" . $page;
 include $dir . "assets/scheme.php";

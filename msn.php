@@ -224,7 +224,6 @@ $kapta = $row["megkapta"];
                         $bcoina = $bcoina + $bcoin;
                         $vipcoina = $vipcoina + $vipcoin;
 
-
                         $sql = " UPDATE users SET bcoin= '$bcoina', vipcoin='$vipcoina' WHERE name ='$userteszt' ;";
                         if ($conn->query($sql) === TRUE) {
                         } else {
@@ -240,7 +239,7 @@ $kapta = $row["megkapta"];
                         } else {
                         }
 
-                        $itemmm = $row["itemcount"] + $itemcount;
+                        $itemmm = (isset($row["itemcount"])?$row["itemcount"]:0)+ $itemcount;
                         $sql = " UPDATE raktar SET itemcount = '$itemmm' WHERE name ='$userteszt' and itemid = '$itemid' ;";
                         if ($conn->query($sql) === TRUE) {
                         } else {
