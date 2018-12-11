@@ -17,7 +17,7 @@ if ($result->num_rows > 0) {
 } else {
     $uzi = 0;
 }
-$sql = "SELECT COUNT(*) AS ism FROM friend WHERE name2='$userteszt'AND barat = '10';";
+$sql = "SELECT COUNT(*) AS ism FROM friend WHERE name='$userteszt'AND barat = '10';";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
