@@ -88,6 +88,6 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
+header("location:index.php?page=msn");
 
 ?>
