@@ -11,8 +11,23 @@ $kapname= $_POST["kapname"];
 $sendname= $_POST["sendname"];
 $title = $_POST["title"];
 $text = $_POST["text"];
+$nemok = 0;
+
+
 $itemid = $_POST["itemid"];
 $itemcount = $_POST["itemcount"];
+$sql = "SELECT * FROM raktar WHERE name='$loginname' and itemid='$itemid';";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+} else {  }
+if ( $itemcount == "") { $itemcount = 0;}
+if ( $itemcount > 0 or $itemcount < 9999 ) { } else { $itemcount = 0;}
+if ( $row["itemcount"] < $itemcount ) {
+ $nemok = 1;
+}
+
+
 $bcoin = $_POST["bcoin"];
 $href = 'valami';
 $date = date("Y-m-d H:i:s");
