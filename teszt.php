@@ -13,6 +13,7 @@ $sql = "SELECT * FROM teszt2 ;";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $i = 1;
+    ?> <div class="container-fluid" > <?php
     while ($row = $result->fetch_assoc()) {
         $i = 1;  ?>
         <div class="row" > <?php
@@ -27,5 +28,6 @@ if ($result->num_rows > 0) {
        ?> </div> <?php
         echo "<br>";
     }
+        ?> </div> <?php
 }
 ?>
