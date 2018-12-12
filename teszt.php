@@ -42,7 +42,7 @@ if ($result->num_rows > 0) {
 <script>
     $(document).ready(function(){
         $("div").click(function(){
-            $(this).css("color", "red")
+            $(this).css("background-color", "red")
         });
     });
 </script>
