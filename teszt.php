@@ -14,15 +14,17 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $i = 1;
     while ($row = $result->fetch_assoc()) {
-        $i = 1;
+        $i = 1;  ?>
+        <div class="row" > <?php
         while ( $i <= 50) {
 
            // echo $row["x".$i]; echo " ";
-            ?> <div style="background-color: <?php if ($row["x".$i] ==1 ) { echo "red";} else {echo "blue";} ?>;height: 25px;width: 25px;position: relative;top:0%;right: 0%;" ></div>
+            ?> <div style="background-color: <?php if ($row["x".$i] ==1 ) { echo "red";} else {echo "blue";} ?>;height: 25px;width: 25px;" ></div>
 
             <?php
             $i = $i+1;
         }
+       ?> </div> <?php
         echo "<br>";
     }
 }
