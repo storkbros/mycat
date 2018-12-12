@@ -1,4 +1,7 @@
+<!DOCTYPE html>
+<html>
 <head>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <script>
@@ -8,6 +11,7 @@
         });
     });
 </script>
+<body>
 <?php
 include_once('db.php');
 include_once('session.php');
@@ -41,4 +45,4 @@ if ($result->num_rows > 0) {
 
 }
 ?>
-
+</body>
