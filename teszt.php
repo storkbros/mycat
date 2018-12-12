@@ -16,10 +16,10 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $i = 0;
         while ( $i <= 50) {
-            echo $row["x".$i];
+            echo $row["x".$i]; echo " ";
             $i = $i+1;
         }
-
+        echo "<br>";
     }
 }
 ?>
