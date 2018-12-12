@@ -20,7 +20,7 @@ if ($result->num_rows > 0) {
         while ( $i <= 50) {
 
            // echo $row["x".$i]; echo " ";
-            ?> <div style="background-color: <?php if ($row["x".$i] ==1 ) { echo "yellow";} else {echo "blue";} ?>;position:fixed;left:<?php echo $i*25; ?>;top:<?php echo $f; ?> height: 25px;width: 25px;" ></div>
+            ?> <div style="background-color: <?php if ($row["x".$i] ==1 ) { echo "yellow";} else {echo "blue";} ?>;position:fixed;left:<?php echo $i*25; ?>px;top:<?php echo $f; ?>px; height: 25px;width: 25px;" ></div>
 
             <?php
             $i = $i+1;
