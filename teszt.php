@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
         while ( $i <= 50) {
 
            // echo $row["x".$i]; echo " ";
-            ?> <a href"teszt.php?poz=<?php echo $i; ?>&poz2=<?php echo $y; ?>"> <div style="background-color: <?php if ($row["x".$i] ==1 ) { echo "yellow";} else {echo "blue";} ?>;position:fixed;left:<?php echo $i*25; ?>px;top:<?php echo $f; ?>px; height: 25px;width: 25px;" ></div> </a>
+            ?> <a href="teszt.php?poz=<?php echo $i; ?>&poz2=<?php echo $y; ?>"> <div style="background-color: <?php if ($row["x".$i] ==1 ) { echo "yellow";} else {echo "blue";} ?>;position:fixed;left:<?php echo $i*25; ?>px;top:<?php echo $f; ?>px; height: 25px;width: 25px;" ></div> </a>
 
             <?php
             $i = $i+1;
