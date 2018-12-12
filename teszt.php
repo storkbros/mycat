@@ -4,13 +4,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
-<script>
-    $(document).ready(function(){
-        $("div").click(function(){
-            $(this).css("color", "red")
-        });
-    });
-</script>
+
 <body>
 <?php
 include_once('db.php');
@@ -45,4 +39,11 @@ if ($result->num_rows > 0) {
 
 }
 ?>
+<script>
+    $(document).ready(function(){
+        $("div").click(function(){
+            $(this).css("color", "red")
+        });
+    });
+</script>
 </body>
