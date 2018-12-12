@@ -1,4 +1,6 @@
-
+<head>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
 <?php
 include_once('db.php');
 include_once('session.php');
@@ -20,8 +22,8 @@ if ($result->num_rows > 0) {
         $f = $f+25;
         while ( $i <= 50) {
 
-           // echo $row["x".$i]; echo " ";
-            ?> <a href="teszt.php?poz=<?php echo $i; ?>&poz2=<?php echo $y; ?>"> <div style="background-color: <?php if ($row["x".$i] ==1 ) { echo "yellow";} else {echo "blue";} ?>;position:fixed;left:<?php echo $i*25; ?>px;top:<?php echo $f; ?>px; height: 25px;width: 25px;" ></div> </a>
+
+            ?> <div style="background-color: <?php if ($row["x".$i] ==1 ) { echo "yellow";} else {echo "blue";} ?>;position:fixed;left:<?php echo $i*25; ?>px;top:<?php echo $f; ?>px; height: 25px;width: 25px;" ></div>
 
             <?php
             $i = $i+1;
@@ -32,3 +34,11 @@ if ($result->num_rows > 0) {
 
 }
 ?>
+
+<script>
+    $(document).ready(function(){
+        $("div").click(function(){
+            $(this).css("color", "red")
+        });
+    });
+</script>
