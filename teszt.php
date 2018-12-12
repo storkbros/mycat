@@ -13,21 +13,21 @@ $sql = "SELECT * FROM teszt2 ;";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $i = 1;
-    ?> <div class="container-fluid" > <?php
+    $f = 0;
     while ($row = $result->fetch_assoc()) {
-        $i = 1;  ?>
-        <div class="row" > <?php
+        $i = 1;
+        $f = $f+25;
         while ( $i <= 50) {
 
            // echo $row["x".$i]; echo " ";
-            ?> <div class="col" style="background-color: <?php if ($row["x".$i] ==1 ) { echo "yellow";} else {echo "blue";} ?>;height: 25px;width: 25px;" ></div>
+            ?> <div style="background-color: <?php if ($row["x".$i] ==1 ) { echo "yellow";} else {echo "blue";} ?>;position:fixed;left:<?php echo $i*25; ?>;top:<?php echo $f; ?> height: 25px;width: 25px;" ></div>
 
             <?php
             $i = $i+1;
         }
-       ?> </div> <?php
-        echo "<br>";
+
+
     }
-        ?> </div> <?php
+
 }
 ?>
