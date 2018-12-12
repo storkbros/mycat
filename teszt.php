@@ -15,16 +15,16 @@ if ($result->num_rows > 0) {
     $i = 1;
     while ($row = $result->fetch_assoc()) {
 
-    echo $row["q1"]; echo " ";
-    echo $row["q2"];echo " ";
-        echo $row["q3"];echo " ";
-        echo $row["q4"];echo " ";
-        echo $row["q5"];echo " ";
-        echo $row["q6"];echo " ";
-        echo $row["q7"];echo " ";
-        echo $row["q8"];echo " ";
-        echo $row["q9"];echo " ";
-        echo $row["q10"];echo " ";
+    echo $row["x1"]; echo " ";
+    echo $row["x2"];echo " ";
+        echo $row["x3"];echo " ";
+        echo $row["x4"];echo " ";
+        echo $row["x5"];echo " ";
+        echo $row["x6"];echo " ";
+        echo $row["x7"];echo " ";
+        echo $row["x8"];echo " ";
+        echo $row["x9"];echo " ";
+        echo $row["x10"];echo " ";
         echo "<br>";
 
     }
