@@ -16,7 +16,11 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $i = 1;
         while ( $i <= 50) {
-            echo $row["x".$i]; echo " ";
+
+           // echo $row["x".$i]; echo " ";
+            ?> <div style="background-color: <?php if ($row["x".$i] ==1 ) { echo "red";} else {echo "blue";} ?>;height: 25px;width: 25px;" ></div>
+
+            <?php
             $i = $i+1;
         }
         echo "<br>";
