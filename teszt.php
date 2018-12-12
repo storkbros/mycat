@@ -14,7 +14,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $i = 1;
     while ($row = $result->fetch_assoc()) {
-        $i = 0;
+        $i = 1;
         while ( $i <= 50) {
             echo $row["x".$i]; echo " ";
             $i = $i+1;
